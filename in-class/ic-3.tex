@@ -1,0 +1,153 @@
+\documentclass[12pt,fleqn,answers]{exam}
+%\usepackage{pifont}
+%\usepackage{dingbat,bbding}
+
+\usepackage{amssymb}
+\usepackage[intlimits]{amsmath}
+\usepackage{epsfig}
+\usepackage{upgreek}
+\usepackage[super]{nth}
+\usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}
+\usepackage[letterpaper, margin=0.75in]{geometry}
+\addpoints
+\boxedpoints
+\pointsinmargin
+\pointname{pts}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{calc}
+\usepackage[final]{microtype}
+\frenchspacing
+\usepackage[american]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[]{fourier}
+\usepackage{isomath}
+\usepackage{upgreek,amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\newcommand{\dotprod}{\, {\scriptzcriptztyle\stackrel{\bullet}{{}}}\,}
+
+\newcommand{\reals}{\mathbf{R}}
+\newcommand{\lub}{\mathrm{lub}} 
+\newcommand{\glb}{\mathrm{glb}} 
+\newcommand{\complex}{\mathbf{C}}
+\newcommand{\dom}{\mbox{dom}}
+\newcommand{\range}{\mbox{range}}
+\newcommand{\cover}{{\mathcal C}}
+\newcommand{\integers}{\mathbf{Z}}
+\newcommand{\vi}{\, \mathbf{i}}
+\newcommand{\vj}{\, \mathbf{j}}
+\newcommand{\vk}{\, \mathbf{k}}
+\newcommand{\bi}{\, \mathbf{i}}
+\newcommand{\bj}{\, \mathbf{j}}
+\newcommand{\bk}{\, \mathbf{k}}
+\DeclareMathOperator{\Arg}{\mathrm{Arg}}
+\DeclareMathOperator{\Ln}{\mathrm{Ln}}
+\newcommand{\imag}{\, \mathrm{i}}
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+\shadedsolutions
+%\definecolor{shadecolor}{RGB}{200,200,200}
+\colorlet{shadecolor}{gray!10}
+%\colorlet{shadecolor}{gray!40}
+\newcommand\AM{\textsc{am}}
+\newcommand\PM{\textsc{pm}}
+     
+\newcommand{\quiz}{3}
+\newcommand{\term}{Spring }
+\newcommand{\due}{Thursday 1 February 13:20}
+\newcommand{\class}{MATH 202, \term \the\year}
+\begin{document}
+\large
+\vspace{0.1in}
+\noindent\makebox[3.0truein][l]{\textbf{\class}}
+\textbf{Name:} \hrulefill \\
+\noindent \makebox[3.0truein][l]{\textbf{In class work \quiz}}
+\textbf{Row and Seat}:\hrulefill\\
+\vspace{0.1in}
+
+
+\noindent  In class work  \textbf{\quiz\/}  has questions \textbf{1} through  \textbf{\numquestions} \/ with a total of \textbf{\numpoints\/}  points.   
+Turn in your work at the end of class  \emph{on paper}. This assignment is due \emph{\due}.
+
+\vspace{0.1in}
+
+
+\begin{questions} 
+
+    \question[2] Evaluate the definite integral 
+    $\int_0^2  x  \sqrt{1 + x^2} \, \mathrm{d} x$ by using 
+    the substitution $z = 1 + x^2$.  
+    \begin{solution}[4.5in] \textbf{Method I} 
+    
+    Let $z = 1+x^2$. Then $\mathrm{d} z = 2 x \mathrm{d} x$. The integrand has a factor of $ x \mathrm{d} x$, so
+    let's solve  $\mathrm{d} z = 2 x \mathrm{d} x$ for $ x \mathrm{d} x$. Thus $ x \mathrm{d} x = \frac{1}{2} \mathrm{d} z$.  When $x = 0$, we have $z = 1$; when
+    $x=2$, we have $z = 5$. So
+    \begin{align}
+     \int_0^2  x  \sqrt{1 + x^2} \, \mathrm{d} x &= \int_1^5 \frac{1}{2} \sqrt{z} \, \mathrm{d} z,  && (\text{substitution}) \\
+            &= \left. \frac{1}{2} \times \frac{2}{3} z^{3/2} \right \vert_{z=1}^{z=5},   && (\text{FTC}) \\
+            &= \frac{1}{3} \left( 5^{3/2} - 1 \right).  && (\text{algebra}) 
+    \end{align}
+    
+    \textbf{Method II}  For Method II, we first find an anti derivative by using a substitution, second we return the 
+    original variable, and finally we use the FTC.   Let $z = 1+x^2$. Then $\mathrm{d} z = 2 x \mathrm{d} x$. The integrand has a factor of $ x \mathrm{d} x$, so
+    let's solve  $\mathrm{d} z = 2 x \mathrm{d} x$ for $ x \mathrm{d} x$. Thus $ x \mathrm{d} x = \frac{1}{2} \mathrm{d} z$.   So
+    
+\begin{align}
+     \int x  \sqrt{1 + x^2} \, \mathrm{d} x &= \int \frac{1}{2} \sqrt{z} \, \mathrm{d} z,  && (\text{substitution}) \\
+                                                             &=  \frac{1}{2} \times \frac{1}{3} z^{3/2},   
+                                                              && (\text{power rule for antiderivatives }) \\
+                                                             &= \frac{1}{3}  (1+x^2)^{3/2}.  && (\text{return to original variable}) 
+    \end{align}
+    
+  Now we can use the FTC
+ \begin{align}
+     \int_0^2  x  \sqrt{1 + x^2} \, \mathrm{d} x &= \left.  \frac{1}{3}  (1+x^2)^{3/2} \right \vert_{x=0}^{x=2},\\
+                                                                     &= \frac{1}{3} \left( 5^{3/2} - 1 \right).
+\end{align}
+        \end{solution}
+
+    \newpage
+
+    \question The force required to extend a spring is proportional to 
+    the amount of extension.
+
+    \begin{parts}
+
+    \part [2]  If a force of 10 Newtons extends the spring
+     $0.03$ meters, find the formula for the force $F$ required to 
+     extend the spring $x$ meters.
+
+     \begin{solution}[4.5in] The force $F$ as a function of displacement $x$ has the form $F = kx$, where $k$ is a number.
+     From the given data, we have $10 = k \times 0.03$.  So $k = \frac{1000}{3} \,\,  \mathrm{N}/\mathrm{m}$.
+    
+
+    
+        
+     \end{solution}
+
+     \part[2] Find the \emph{work} required to extend the spring $0.05$ meters.
+      If you don't know, the MKS unit of work is the Joule (which is Newton $\times$ meter).
+      (To maybe make this more tangible: To lift a two pound sack of sugar three feet up, the work required is
+      about one Joule.)
+      
+      \begin{solution}[4.5in] 
+      \begin{equation}
+        W = \int_0^{0.05}  \frac{1000}{3} x \, \mathrm{d} x =  \left. \frac{1000}{6} x^2 \right |_{x=0}^{x = 0.05}
+        = \frac{5}{12} \,\, \mathrm{J}.
+      \end{equation}
+    
+        
+     \end{solution}
+
+    \end{parts}
+
+
+  
+\end{questions}
+
+\end{document}
+
