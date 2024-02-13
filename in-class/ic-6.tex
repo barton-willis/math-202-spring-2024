@@ -1,4 +1,4 @@
-\documentclass[12pt,fleqn]{exam}
+\documentclass[12pt,fleqn,answers]{exam}
 %\usepackage{pifont}
 %\usepackage{dingbat,bbding}
 
@@ -83,18 +83,37 @@ Turn in your work at the end of class  \emph{on paper}. This assignment is due \
 
 \part [2] Find a GS to the DE.  Remember that a GS has one arbitrary constant.
 \begin{solution}[2.5in]
-
+We need to match the given DE to $A^\prime(y)  \frac{\mathrm{d} y}{\mathrm{d} x} = B^\prime(x)$.
+To make the match, we need to subtract $2x$ from the DE. That
+gives $\displaystyle  3 y^3   \frac{\mathrm{d} y}{\mathrm{d} x} = - 2 x$.
+So $A^\prime(y) = 3 y^3$ and $B^\prime(x) = -2 x$.  Integrating, we find that
+$A(y) = y^4$ and $B(x) = -x^2 + c$, where $c \in \reals$. So a GS to the DE is
+\begin{equation}
+ y^4 = -x^2 + c.
+\end{equation}
+Another GS is 
+\begin{equation}
+    y^4 = -x^2 + \uppi c.
+   \end{equation}
+And another is
+\begin{equation}
+    y^4 + 14 = -x^2 + \uppi c.
+   \end{equation}
 \end{solution}
 
 \part [2] Find a solution to the DE that satisfies $y = 2$ when $x=1$.
 \begin{solution}[2.5in]
-
+We need to paste $y=2$ and $x=1$ into a GS. That gives
+\begin{equation}
+    2^4 = -1^2 + c.
+   \end{equation}
+so $c = 17$.
 \end{solution}
 
 
 \part [2] Use Desmos to graph the solution you found in part `b.' 
 \begin{solution}%[2.5in]
-
+\includegraphics*[scale=0.2]{desmos-graph(74).png}
 \end{solution}
 
 
@@ -103,7 +122,30 @@ Turn in your work at the end of class  \emph{on paper}. This assignment is due \
 \end{parts}
 
 \newpage 
-\question Find the numerical value of the definite integral $\int_4^8 \frac{1}{5 x + 1} \, \mathrm{d} x$.
+\question Find the numerical value of the definite integral 
+$\int_4^8 \frac{1}{5 x + 1} \, \mathrm{d} x$.
+
+\begin{solution}
+Let $z = 5 x + 1$. Then $\mathrm{d} z = 5 \mathrm{d} x$. When $x=4$, 
+we have $z = 21$; and when $x=8$, we have $z = 41$. So
+\begin{equation}
+    \int_4^8 \frac{1}{5 x + 1} \, \mathrm{d} x
+    = \int_{21}^{41} \frac{1}{5} \frac{1}{z} \, \mathrm{d} z
+    = \frac{1}{5} \left( \ln(41) - \ln(21) \right).
+\end{equation}
+Most folks would say that using the logarithm of a sum rule, a 
+simpler answer is
+\begin{equation}
+    \int_4^8 \frac{1}{5 x + 1} \, \mathrm{d} x
+     = \frac{1}{5}  \ln\left( \frac{41}{21} \right).
+\end{equation}
+We could use the identity $y \ln(x) = \ln(x^y)$. That gives an answer
+\begin{equation}
+   \ln\left( \sqrt[5]{\frac{41}{21}} \right),
+\end{equation}
+but trading a division by $5$ by a fifth root doesn't seem like a 
+simplification.
+\end{solution}
 
 \end{questions}
 
