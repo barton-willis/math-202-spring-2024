@@ -1,0 +1,100 @@
+\documentclass[12pt,fleqn]{exam}
+\usepackage{pifont,bbding,url}
+\usepackage{upgreek}
+\usepackage{amsmath}
+\usepackage{fleqn}
+\usepackage{epsfig}
+\usepackage{pdfpages}
+\usepackage[final]{microtype}
+\usepackage{color}
+\usepackage{enumerate}
+%\usepackage[euler-digits,euler-hat-accent,T1]{eulervm}
+\usepackage{amssymb, wasysym, enumerate}
+\shadedsolutions
+%\definecolor{SolutionColor}{rgb}{0.9,1,1}
+\definecolor{SolutionColor}{rgb}{1,1,0.7}
+\addpoints
+\boxedpoints
+\pointsinmargin
+\pointname{pts}
+
+\usepackage{fourier}
+\newcommand{\dotprod}{\, {\scriptzcriptztyle \stackrel{\bullet}{{}}}\,}
+\begin{document}
+
+\newcommand{\reals}{\mathbf{R}}
+\newcommand{\bi}{\mathbf{i}}
+\newcommand{\bj}{\mathbf{j}}
+\newcommand{\bk}{mathbf{k}}
+
+\newcommand{\euler}{\mathrm{e}}
+\newcommand{\ex}{1}
+\newenvironment{alphalist}{
+  \begin{enumerate}[(a)]
+    \addtolength{\itemsep}{-1.0\itemsep}}
+  {\end{enumerate}}
+
+\newenvironment{handlist}{
+  \begin{enumerate}[\leftthumbsup]
+    \addtolength{\itemsep}{-1.0\itemsep}}
+  {\end{enumerate}}
+
+
+\vspace{0.1in}
+\noindent\makebox[3.0truein][l]{{\bf MATH 202}}
+{\bf Name:}\hrulefill\
+\noindent \makebox[3.0truein][l]{\bf In class work 10}
+{\bf Row:}\hrulefill\
+
+
+\noindent \emph{“Study without desire spoils the memory, and it retains nothing that it takes in.”} \\ 
+$\phantom{xxx}$ \hfill  \textsc{Leonardo da Vinci}
+
+For all $a,b,x \in \reals$, we have 
+\begin{align*}
+\cos{\left( a x\right) } \cos{\left( b x\right) } & =\frac{\cos{\left( b x+a x\right) }}{2}+\frac{\cos{\left( b x-a x\right) }}{2},\\
+\cos{\left( a x\right) } \sin{\left( b x\right) }&=\frac{\sin{\left( b x+a x\right) }}{2}+\frac{\sin{\left( b x-a x\right) }}{2}, \\
+\sin{\left( a x\right) } \sin{\left( b x\right) } & =\frac{\cos{\left( b x-a x\right) }}{2}-\frac{\cos{\left( b x+a x\right) }}{2}
+\end{align*}
+
+\begin{questions}
+
+\question  Find the numerical value of the definite integral
+
+\begin{parts}
+
+\part [1] $ \displaystyle  \int_0^{\pi/4} \sin(5 x) \sin(6 x) \,  dx$
+\begin{solution}[3.0in]
+
+\end{solution}
+
+\part [1] $ \displaystyle  \int_0^{\pi} \sin(5 x) \sin(6 x) \,  dx$
+
+\end{parts}
+\newpage
+
+\question Use the reduction formula
+\begin{equation}
+ \int \tan(x)^n \, \mathrm{d} x = \frac{\tan(x)^{n-1}}{n-1}  - \int \tan(x)^{n-2} \, \mathrm{d} x, \quad n \neq 1
+\end{equation}
+to find $\displaystyle \int \tan(28 x)^6 \, \mathrm{d} x$
+\begin{solution}%[3.0in]
+
+\end{solution}
+
+\newpage
+
+\question Use the reduction formula
+\begin{equation}
+ \int \sec(x)^n \, \mathrm{d} x = \frac{\sec(x)^{n-2} \tan(x)}{n-1}  + \frac{n-2}{n-1} \int \sec(x)^{n-2} \, \mathrm{d} x, \quad n \neq 1
+\end{equation}
+along with
+\begin{equation}
+  \int \sec(x) \, \mathrm{d} x =  \log \left( \tan{(x)}+\sec{(x)}\right) 
+\end{equation}
+to find $\displaystyle  \int \sec(28 x)^4 \, \mathrm{d} x$
+
+
+\end{questions}
+%\includepdf[pages={1-}]{cheat_sheet.pdf}     
+\end{document}

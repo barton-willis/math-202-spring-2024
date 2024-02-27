@@ -1,0 +1,111 @@
+\documentclass[letterpaper,landscape,9pt,fleqn]{extarticle}
+\usepackage[document]{ragged2e}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{url}
+\usepackage{qrcode}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{calc}
+\usepackage{array}   % for \newcolumntype macro
+%\usepackage{fourier}
+\usepackage{graphicx,nicefrac}
+\usepackage{isomath,upgreek,xcolor,comment,fourier}
+\usepackage{pdfpages}
+\usepackage{tkz-euclide}
+\usepackage{enumitem}
+%\usetkzobj{all}
+\pagestyle{empty}
+\usepackage[final]{microtype}
+\usepackage[american]{babel}
+
+\usepackage{amstext} % for \text macro
+\usepackage{array}   % for \newcolumntype macro
+\newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+
+\newcommand{\dom}{\mathrm{dom}} 
+\newcommand{\range}{\mathrm{range}} 
+\newcommand{\zero}{\mathrm{zero}} 
+\newcommand{\reals}{\mathbf{R}} 
+\newcommand{\integers}{\mathbf{Z}} 
+\newcommand{\ssep}{\mid}
+\newcommand{\arcsec}{\mathrm{arcsec}}
+\newcommand{\arccsc}{\mathrm{arccsc}}
+\newcommand{\arccot}{\mathrm{arccot}}
+
+\usepackage{amsmath,amssymb,textcomp}
+\everymath{\displaystyle}
+\usepackage{tgheros}
+\usepackage{multicol}
+\setlength{\columnseprule}{0pt}
+\setlength{\columnsep}{15pt}
+\usepackage{amsfonts}
+
+ \newcommand{\dd}{\mathrm{d}} 
+ \newcommand{\intl}[4]{\displaystyle\int^{#2}_{#1}{#3}{\,\dd #4}}
+\usepackage{geometry}
+\geometry{letterpaper,left=5mm,right=5mm,top=5mm,bottom=5mm}
+
+%\linespread{1}
+
+
+
+% custom section
+\usepackage[explicit]{titlesec}
+\newcommand*\sectionlabel{}
+\titleformat{\section}
+  {\gdef\sectionlabel{}
+   \normalfont\sffamily\Large\bfseries\scshape}
+  {\gdef\sectionlabel{\thesection\ }}{0pt}
+  {
+\noindent
+\begin{tikzpicture}
+\node[rectangle,rounded corners=3pt,inner sep=4pt,fill=blue!50!black,text width= 0.95\columnwidth] {\color{white}\sectionlabel#1};
+\end{tikzpicture}
+  }
+
+\raggedbottom 
+%\allowdisplaybreaks
+\usepackage{tikz-3dplot}
+\begin{document}
+
+\setlength{\parskip}{-6mm}
+\begin{multicols*}{4}
+\section*{Trigonometric product rules}
+
+For all $x,y \in \reals$, we have 
+\begin{align*}
+\cos{\left( x\right) } \cos{\left( y \right) } & =\frac{\cos{\left( x + y \right) }}{2}+\frac{\cos{\left( x - y \right) }}{2},\\
+\cos{\left( x \right) } \sin{\left( y \right) }&=\frac{\sin{\left( x + y \right) }}{2}-\frac{\sin{\left( x - y \right) }}{2}, \\
+\sin{\left( x \right) } \sin{\left( y \right) } & =\frac{\cos{\left( x - y \right) }}{2}-\frac{\cos{\left( x + y\right) }}{2}.
+\end{align*}
+
+\vspace{0.1in}
+\section*{Integration reduction rules}
+
+\begin{align*}
+ \intl{}{}{\tan(x)^n}{x} &= \begin{cases} \ln \left(|\sec(x)| \right) & n = 1 \\
+                                \frac{\tan(x)^{n-1}} {n-1} - \intl{}{}{\tan(x)^{n-2}}{x} & n \neq 1
+                                \end{cases}\\
+   \intl{}{}{\sec(x)^n}{x} &= \begin{cases} \ln \left( |\tan(x)+\sec(x) \right |)  & n = 1 \\
+                                \frac{\sec(x)^{n-2} \tan(x)} {n-1} + \frac{n-2}{n-1} \intl{}{}{\sec(x)^{n-2}}{x} & n \neq 1
+                                \end{cases}
+                     \end{align*}                   
+
+\vspace{0.1in}                
+ \section*{Products of tan and sec}
+ \begin{align*}
+  \intl{}{}{\tan(x)^{2m+1} \sec(x)^n}{x} &= \intl{}{}{(u^2-1)^{m} u^{n-1}}{u}, \text{ where } u = \sec(x)\\
+  \intl{}{}{\tan(x)^{m} \sec(x)^{2n}}{x} &= \intl{}{}{u^m (u^2+1)^{2n-2}}{u}, \text{ where } u = \tan(x)\\
+  \intl{}{}{\tan(x)^{2 m} \sec(x)^{n}}{x} &= \intl{}{}{(\sec(x)^2-1)^m \sec(x)^n}{u}, \text{ expand }\\ 
+ \end{align*}                    
+\vfill 
+\noindent Revised \today. Barton Willis is the author of this work. This work is
+licensed under Attribution 4.0 International (CC BY 4.0) \,  \qrcode[height=0.15in]{https://creativecommons.org/licenses/by/4.0/}. For the current version of
+this document, visit \, \qrcode[height=0.15in]{https://github.com/barton-willis/calculus-two} 
+
+\end{multicols*}
+\end{document}
+
