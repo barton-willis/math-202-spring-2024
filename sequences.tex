@@ -112,7 +112,7 @@
 
 
 
-
+\usepackage{fourier}
 \begin{document}
 
 \begin{frame}
@@ -124,8 +124,8 @@ MATH 202 \\
 \today }
 
 
-\emph{“It's the sides of the mountain that sustain life, not the top.”} \hfill
-{\sc Robert M. Pirsig} 
+\emph{“It's the sides of the mountain that sustain life, not the top.”} \\
+$\phantom{xxxx}$ \hfill {\sc Robert  Pirsig} 
 \end{flushleft}
 \end{frame}
 
@@ -184,10 +184,10 @@ This is fru-fru clutter. And I don't like fru-fru clutter.
 \item \(\displaystyle b(k) = \begin{cases} 100 & \mbox{ if } k <
     10 \\ \frac{1}{k} & \mbox{ if } k \geq 10 \end{cases} \)  and $\dom(b)=\integers_{\geq 0}$.
 
-\item  \(\displaystyle c(k) = \frac{1}{k!} \) and  and $\dom(c)=\integers_{\geq 0}$. 
+\item  \(\displaystyle c(k) = \frac{1}{k!} \) and $\dom(c)=\integers_{\geq 0}$. 
 
-\item  \(\displaystyle d(k)  = \sum_{\ell=0}^k \frac{1}{\ell+1}\) and  $\dom(d)=\integers_{\geq 0}$. We have
-\(d_0 = 1\), \(d_1 = 3/2\), and \(d_2 = 1+1/2 + 1/3 = 11/6\).
+\item  \(\displaystyle d(k)  = \sum_{\ell=1}^k \frac{1}{\ell}\) and  $\dom(d)=\integers_{\geq 1}$. We have
+\(d_1 = 1\), \(d_2 = 3/2\), and \(d_3 = 1+1/2 + 1/3 = 11/6\).
 
 
 %\item \(e = k \in \integers \mapsto \left \lfloor 10 \left( 10^{k-1} \pi - \lfloor 10^{k-1}
@@ -235,9 +235,11 @@ asks you to guess the formula. Such questions are \textbf{abject silliness}.
 \item there is number \(L\) such that
 \item for \emph{each} positive number \(\varepsilon\) 
 \item there is an  integer \(N\) such that
-\item \label{dee} for all \(k \in \integers_{\geq M}\), we have
+\item \label{dee} for all \(k \in \integers_{\geq N}\), we have
 \(L  - \varepsilon < a_k\) and \(a_k < L + \varepsilon\).
 \end{alphalist}
+ An alternative to `\ref{dee}' is \(|a_k - L | < \varepsilon\)
+for all \(k \in \integers_{\geq N}\).
 When this is the case, we say the sequence \(a\) converges to
 \(L\). This is expressed as either
 \[
@@ -250,7 +252,8 @@ In logician speak, we have
 \left(\exists L \in \reals\right) 
 \left(\forall \varepsilon \in \reals_{>0}\right)
 \left(\exists N \in \integers\right)
-\left(L  - \varepsilon < a_k \text{ and } a_k < L + \varepsilon  \right).
+\left(\forall k \in \integers_{>N}\right)
+\left(|a_k - L | <  \varepsilon \right).
 \end{equation*}
 %\item We have \( \{ a_k \mid k > M \} = \{a_{M+1}, a_{M+2}, \dots \}\).
 \end{frame}
