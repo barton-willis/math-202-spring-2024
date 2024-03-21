@@ -2,20 +2,15 @@
 \usetheme[progressbar=frametitle]{metropolis}
 \usepackage{amsmath}
 \usepackage{fleqn,amssymb,shadow}
-\usepackage{pifont,enumerate}
+%\usepackage{pifont,enumerate}
 
 \usepackage{float}
 \usepackage{epsfig}
-%\usepackage{pifont}
-%\usepackage{dingbat,bbding}
-\usepackage{pdfcolmk}
 \usepackage{enumerate}
-%\usepackage{wasysym,marvosym}
 
 \raggedright
 \newcommand{\fma}{{\rm fma}}
 \newcommand{\reals}{\mathbf{R}}
-\newcommand{\fpq}{\phantom{}_0{\rm F}_1}
 \newcommand{\epsmach}{\varepsilon_m}
 \newcommand{\mymax}{\mbox{max} \,\,}
 \newcommand{\mydeg}{\mbox{deg}}
@@ -35,55 +30,12 @@
 
 \newenvironment{alphalist}
    {\begin{enumerate}[(a)]
-       \addtolength{\itemsep}{-1.25\itemsep}}
+       \addtolength{\itemsep}{0.0\itemsep}}
      {\end{enumerate}}
-
-%\newenvironment{enumerate}{
- % \begin{enumerate}[\bullet]
- %   \addtolength{\itemsep}{-1.0\itemsep}}
- % {\end{enumerate}}
-
-\usepackage{mathptm,calc}
-\newcounter{mysec}\setcounter{mysec}{0}
-\newcommand{\mysec}{%\
-\setcounter{mysec}{\value{mysec}+1}
-\themysec}
-
-\newcommand{\startsec}[1]{\setcounter{myalgo}{0}
- \begin{flushleft}
-    {\bf \mysec \,\, #1}
- \end{flushleft}}
-
-\newcounter{myalgo}\setcounter{myalgo}{0}
-\newcommand{\myalgo}{%\
-\setcounter{myalgo}{\value{myalgo}+1} \themyalgo}
-\newcommand{\algo}[1]{\vspace{0.1in}
-      \begin{flushleft}
-         {\bf Algorithm \themysec.\hspace{-0.15in}\myalgo} {\em #1}
-      \end{flushleft}
-      \vspace{0.1in}}
-
-\newenvironment{myalgorithm}[1]
-  {\setcounter{myalgo}{\value{myalgo}+1} 
-   \textbf{Algorithm \themysec.\hspace{-0.15in}\myalgo} {\em #1} \\ \vspace{0.15in}}
-  
-\newcounter{myfig}\setcounter{myfig}{0}
-\newcommand{\myfig}{%\
-\setcounter{myfig}{\value{myfig}+1} \themyfig}
-\newcommand{\fig}[1]{\vspace{0.1in}
-      \begin{flushleft}
-         {\bf Figure \themysec.\hspace{-0.15in}\myfig} {\em #1}
-      \end{flushleft}
-    \vspace{0.1in}}
 
 \newcommand{\complex}{\mathbf{C}}
 %\newcommand{\reals}{\mathbf{R}}
 \newcommand{\integers}{\mathbf{Z}}
-\newcommand{\myarg}{\mbox{arg}}
-
-\newcommand{\realpart}{\mbox{Re}}
-\newcommand{\imagpart}{\mbox{Im}}
-
 \newenvironment{define}[1]{
   \textbf{Definition} #1}{}
 
@@ -91,42 +43,26 @@
   \index{#1}
   \textbf{Definition} #2}{\(\blacktriangleleft\)}
 
-%\newenvironment{example}[1]{
-  %\textbf{Example} #1}
+\newenvironment{myexample}[1]{
+  \textbf{Example} #1}
 
-%\newenvironment{facts}{\textbf{Facts}}
-
-%\newenvironment{fact}{\textbf{Fact}}
 
 \newenvironment{mynote}[1]{
   \textbf{Note} #1}
-
-\newcounter{thmcount}\setcounter{thmcount}{0}
-\newcommand{\mythmcount}{%\
-\setcounter{thmcount}{\value{thmcount}+1} \thethmcount}
-
-\newenvironment{myprop}[1]{
-  \textbf{Proposition}\mysec.\hspace{-0.15in}\mythmcount \, #1}
-
-\newenvironment{exercies}{\textbf{Exercies}}
-
-
 
 \usepackage{fourier}
 \begin{document}
 
 \begin{frame}
-\small
 \begin{flushleft} 
-{ \bf
-Classnotes \\
+\textbf{Class notes for sequences} \\
 MATH 202 \\
-\today }
+\today 
+\end{flushleft}
 
 
 \emph{“It's the sides of the mountain that sustain life, not the top.”} \\
-$\phantom{xxxx}$ \hfill {\sc Robert  Pirsig} 
-\end{flushleft}
+$\phantom{xxxx}$ \hfill {\sc Robert Pirsig} 
 \end{frame}
 
 
@@ -153,7 +89,7 @@ sequence.
 
 
 \item An integer subscript on a sequence means function evaluation.
-Thus if \(a\) is a sequence, we have
+Thus, if \(a\) is a sequence, we have
 \[
    a_1 = a(1), \quad a_2= a(2),  \quad a_k = a(k).
 \]
@@ -165,18 +101,12 @@ If the domain is  \(\integers_{\geq 0}\), its first term is \(a_0\).
 \item Our textbook (sometimes) surrounds a sequence with curly braces.
 This is fru-fru clutter. And I don't like fru-fru clutter.
 
-
-
-%\item In \S8.1 sequences have signature \(\integers_{\geq 1} \to
-%\reals\). In later sections, they have signature \(\integers_{\geq 0}
-%\to \reals\).
-
 \end{itemize}
 
 \end{frame}
 \begin{frame}
 
-\begin{example} Each of the following functions are sequences:
+\begin{myexample} Each of the following functions are sequences:
 
 \begin{alphalist}
 \item \(a(k)  = (-1)^k \) and $\dom(a)=\integers_{\geq 0}$.
@@ -189,28 +119,11 @@ This is fru-fru clutter. And I don't like fru-fru clutter.
 \item  \(\displaystyle d(k)  = \sum_{\ell=1}^k \frac{1}{\ell}\) and  $\dom(d)=\integers_{\geq 1}$. We have
 \(d_1 = 1\), \(d_2 = 3/2\), and \(d_3 = 1+1/2 + 1/3 = 11/6\).
 
-
-%\item \(e = k \in \integers \mapsto \left \lfloor 10 \left( 10^{k-1} \pi - \lfloor 10^{k-1}
-%\pi \rfloor \right) \right \rfloor\).  We have \(e_0 = 3\), \(e_1 =
-%1\), \(e_2 = 4\), \(e_3 = 1\), and \(e_4 = 5\). Can you guess a simple
-%rule for the value of \(e\)?
 \end{alphalist}
-\end{example}
+\end{myexample}
 
 \end{frame}
 \begin{frame}{Abject silliness}
-
-%\begin{enumerate}
-% \item  \(\lceil  x  \rceil \) rounds the number \(x\) up to the next
-%integer. It's called the \emph{ceiling} function.
-% \item \(\lfloor x  \rfloor \) rounds the number \(x\) down to the next
-%integer. It's called the \emph{floor} function.
-%\item We have
-%\[
-%   \lceil -1.7 \rceil = -1, \,\,\, \lfloor -1.7 \rfloor -2, \,\,\, 
-%   \lceil 1.7 \rceil = 2, \,\,\, \lfloor 1.7 \rfloor  = 1.
-%\]
-%\end{enumerate}
 
 If you \emph{only} know the first few terms of a sequence, you know
 \textbf{nothing} about its subsequent terms. To illustrate, the first five
@@ -239,7 +152,8 @@ asks you to guess the formula. Such questions are \textbf{abject silliness}.
 \(L  - \varepsilon < a_k\) and \(a_k < L + \varepsilon\).
 \end{alphalist}
  An alternative to `\ref{dee}' is \(|a_k - L | < \varepsilon\)
-for all \(k \in \integers_{\geq N}\).
+for all \(k \in \integers_{> N}\).
+
 When this is the case, we say the sequence \(a\) converges to
 \(L\). This is expressed as either
 \[
@@ -257,16 +171,7 @@ In logician speak, we have
 \end{equation*}
 %\item We have \( \{ a_k \mid k > M \} = \{a_{M+1}, a_{M+2}, \dots \}\).
 \end{frame}
-\begin{frame}
-\begin{itemize}
-\item An alternative to `\ref{dee}' is \(|a_k - L | < \varepsilon\)
-for all \(k \in \integers_{\geq N}\).
 
-\item Graphically, a sequence \emph{converges} if its graph has a
-horizontal asymptote towards infinity.
-
-\end{itemize}
-\end{frame}
 \begin{frame}{G is for graphical}
 
 \begin{itemize}
@@ -287,7 +192,7 @@ would hardly differ from the definition of convergence.
 \item for every number \(L\) 
 \item there is a positive number \(\varepsilon\) such that
 \item for every integer \(N\) 
-\item \label{dee} there is an integer \(k \in \integers_{\geq N}\)
+\item there is an integer \(k \in \integers_{> N}\)
 such that either \(a_k < L - \varepsilon\) or \(L + \varepsilon < a_k\).
 \end{alphalist}
 
@@ -295,498 +200,30 @@ such that either \(a_k < L - \varepsilon\) or \(L + \varepsilon < a_k\).
 \end{define}
 
 \end{frame}
-\begin{frame}{Facts}
+\begin{frame}{Fact}
 
-\noindent \textbf{Theorem} If a sequence converges, its limit is
+  \begin{Theorem} If a sequence converges, its limit is
 unique. 
-\begin{enumerate}
-\item This proposition is about the only fact that our
+  \end{Theorem}
+
+
+This proposition is about the only fact that our
 book doesn't stuff into \S9.1!
-\end{enumerate}
 
+Since limits of sequences are unique, we can write things like
+\begin{equation*}
+  \lim_{\infty} a = 42
+\end{equation*}
+without disrespecting equality. (Suppose we could prove that a sequence 
+$a$ converges to both 42 and to 107. Then we would write
+\begin{equation*}
+  \lim_{\infty} a = 42  \text{ and } \lim_{\infty} a = 107.
+\end{equation*}
+And that is a proof that the truth value $42 = 107$ is true.
 
-\end{frame}
-\end{document}
-
-\noindent {\bf Example} Show that the sequence \(a_n  = (-1)^n \) does not
-converge.
-
-\noindent {\bf Proof} Suppose the sequence does converge.  Then there
-is a number \(L\) and an integer \(M\) such that
-\[
-     \{ (-1)^n  \mid  n > M\} \subset (L - 1/2, L + 1/2). 
-\] 
-\end{frame}
-\begin{frame}
-But for all integers \(M\), we have
-\(\{ (-1)^n  \mid  \, n > M\}\)  \(= \{-1,1\}. \)
-So
-\[
-  \{-1,1\} \subset (L - 1/2, L + 1/2).
-\]
-This isn't possible, because \((L - 1/2, L + 1/2)\) is an interval
-with length 1 and the distance between -1 and 1 is 2; therefore
-the sequence \(a\) diverges.
-
-\noindent {\bf Example}  The sequence \(\displaystyle b_n = \begin{cases} 100 & \mbox{ if } n <
-    10 \\ \frac{1}{n} & \mbox{ if } n \geq 10 \end{cases}  \mbox{ and }
-\mbox{dom}(b) = \integers_{\geq 0}  \) converges.
-
-\noindent{\bf Proof} Let \(\varepsilon\) be a positive number.  Choose 
-\(M = \mbox{max}\{10, \lceil \frac{1}{\varepsilon} \rceil \}\). For
-\(n > M\), we have
-\[
-  0 < b_n = \frac{1}{n} < \frac{1}{M} \leq \frac{1}{ \lceil
-    \frac{1}{\varepsilon} \rceil} \leq \frac{1}{\frac{1}{\varepsilon}}
-  = \varepsilon.
-\]
-Thus
-\(
-   \{b_n \mid n > M \} \subset (-\varepsilon, \varepsilon).
-\)
-
-\end{frame}
-\begin{frame}
-
-\noindent \textbf{Question} Modify the proof for the sequence
-\(\displaystyle b_n = \begin{cases} 100 & \mbox{ if } n <
-    100 \\ \frac{1}{n} & \mbox{ if } n \geq 100 \end{cases}  \mbox{ and }
-\mbox{dom}(b) = \integers_{\geq 0}  \).
-
-
-{\bf Proposition} [page 451] Let \(F : [1,\infty) \to \mathbf{R}.\) If 
-\(\displaystyle \lim_{\infty} F \in \mathbf{R}\), the sequence \(a_n = F(n)\) 
-converges. Further
-\[
-   \lim_{n \to \infty} a_n = \lim_{x \to \infty} F(x).
-\]
-
-{\bf Example} Let \(a\) be the sequence \(a_n = (-1)^n / n\). It takes
-some imagination, but we have
-\[
-   \frac{(-1)^n}{n} = \frac{\cos(\pi n)}{n}.
-\]
-Because \(\displaystyle \lim_{x \to \infty} \cos(\pi x) /x  = 0\), we have
-\[
-  \lim_{n \to \infty} \frac{ (-1)^n}{n} = 0.
-\]
-
-\end{frame}
-\begin{frame}
-
-{\bf Proposition} [Theorem A] Let \(a,b\) be convergent sequences. Then
-\vspace{-0.4in}
-\begin{alphalist}
-\item \(a + b\) is a convergent sequence and 
-\[
-  \lim_{\infty} (a + b)  = \lim_{\infty} (a) + \lim_{\infty} (b).
-\]
-This says the limit is additive.
-
-\item for any \(\alpha \in \mathbf{R}\), \(\alpha \,\, a\) is a convergent sequence and 
-\[
-  \lim_{\infty} (\alpha a)  = \alpha \lim_{\infty} (a).
-\]
-This says the limit is outative.
-
-\item \(a  b\) is a convergent sequence and 
-\[
-  \lim_{\infty} (a  b)  = \lim_{\infty} (a)  \lim_{\infty} (b).
-\]
-This says the limit is distributes over products.
-
-\end{alphalist}
-\end{frame}
-\begin{frame}
-
-\begin{enumerate}
-
-\item[(c)] If \(0 \notin \mbox{range}(b)\) and  
-\(\displaystyle \lim_{\infty} (b) \neq 0\), then  \(a / b\) is a convergent sequence and 
-\[
-  \lim_{\infty} \left(\frac{a}{b}\right)  = \frac{\lim_{\infty} (a)}{\lim_{\infty} (b)}.
-\]
-
-Why the fuss over  \(0 \notin \mbox{range}(b)\)?  Well suppose  \(0
-\in \mbox{range}(b)\). This means for some integer \(k\), we have
-\(b_k  = 0\).  Yikes! \( \left(\frac{a}{b}\right)_k \) has no value
-This means  \(\left(\frac{a}{b}\right)\) isn't a sequence.
-
-
-\end{enumerate}
-{\bf Definition}  Let \(a\) be a sequence. If for all \(n \in \mbox{dom}(a)\) we have
-\begin{alphalist}
-\item  \(a_{n+1} \leq a_n\), the sequence is \emph{monotone decreasing},
-\item  \(a_{n+1} \geq a_n\), the sequence is \emph{ monotone increasing}.
-\end{alphalist}
-If a sequence is either monotone decreasing or increasing, it
-is {\em monotone.\/}
-
-\end{frame}
-\begin{frame}
-
-\begin{define} Let \(a\) be a sequence. If 
-\begin{alphalist}
-\item \( \mbox{range}(a)  \subset  (-\infty, U] \), we say \(U\)
-  is  an  {\em upper\/} bound  for \(a\). We also say that \(a\) is
-bounded above.
-\item  \( \mbox{range}(a)  \subset  [L,\infty) \), we say \(L\)
-  is  an  {\em lower\/} bound  for \(a\).  We also say that \(a\) is
-bounded below.
-\end{alphalist}
-\end{define}
-
-{\bf Proposition} [Theorem D] If a sequence is bounded above and monotone
-increasing, it converges. Further if a sequence is bounded below and monotone
-decreasing, it converges.  
-
-\end{frame}
-\begin{frame}
-
-{\bf Example} The sequence \(c_n = \frac{1}{n!}\) converges. 
-
-{\bf Proof} For all \(n \in \integers_{\geq 0}\) we have
-\(
-   c_n > 0 \mbox{ and } c_{n+1} \leq c_n.
-\)
-So \(c\) is monotone decreasing and bounded below by 0.  Thus \(c\) converges.
-
-\begin{enumerate}
-\item We \textbf{don't} know the limit of \(c\).  If I had to
-guess, I'd say \(\displaystyle \lim_{ n \to \infty} 1 / n! =
-0.\) But \textbf{nothing} in our proof tells us that this is the case.
-\end{enumerate}
-
-\startsec{Recursively defined sequences}
-
-{\bf Definition} A sequence that is partially defined in terms of 
-itself is said to be defined {\em recursively\/}.  
-
-{\bf Example} Let  \(a\) be a sequence and suppose
-\[
-  a_k = \begin{cases} 1 & \mbox{ if } k = 0 \\
-                      k a_{k-1} & \mbox{ if } k > 0
-        \end{cases} .
-\]
-\end{frame}
-\begin{frame}
-Thus
-\begin{eqnarray*}
-a_0 &=& 1, \\
-a_1 &=& 1 a_0 = 1, \\
-a_2 &=& 2 a_1 = 2, \\
-a_3 &=& 3 a_2 = 2 \times 3 = 6.
-\end{eqnarray*}
-It's not too hard to guess (and prove) that a non--recursive 
-formula for \(a\) is 
-\(
-  a_k = k!.
-\)
-Not all recursively defined sequences have simple non-recursive
-formulae.
-
-
-
-
-\startsec{Geometric sums }
-
-\textbf{Fact} For \(x \in \mathbf{R}\) and \(n \in \integers_{\geq 0}\),
-we have
-\[
-  \sum_{k=0}^n x^k = 1 + x + x^2 + \cdots + x^n = \begin{cases} \frac{1-x^{n+1}}{1-x} & x \neq 1
-    \\
-    n + 1 & x = 1
-\end{cases}.
-\]
-
-\end{frame}
-\begin{frame}
-
-\begin{enumerate}
- \item This is the famous (and useful) {\em geometric sum}.
-
- \item The sum index starts at {\em zero.\/}
-
- \item The first term in each sum is \(x^0\). For this formula  to 
-be correct for \(x = 0\), we must demand that \(0^0 = 1\).
-
-\end{enumerate}
-
-
 
-\begin{frame}
 
-\startsec{Sum index gymnastics}
 
-For \(a,b,n \in \mathbf{Z}\) and for any sequence \(f\), we have
-\[
-  \sum_{k=a}^{k=b} f_k = \sum_{k+n = a}^{k+n = b} f_{k+n} =
-  \sum_{k=a-n}^{b-n} f_{k+n}
-\]
-To generate the right side to this equality, {\em every\/} \(k\) was
-replaced by \(k + n\). When \(b = \infty\), we have
-\[
-  \sum_{k=a}^{\infty} f_k = \sum_{k+n = a}^{k+n = \infty} f_{k+n} =
-  \sum_{k=a-n}^{\infty} f_{k+n}
-\]
 
-{\bf Example} Find the value of \(\sum_{k=2}^\infty
-\left(1/3\right)^k\).
-
-We have
-\[
-   \sum_{k=2}^\infty \left(1/3 \right)^k =
-  \sum_{k+2=2}^\infty \left(1/3\right)^{k+2}
-  = \frac{1}{9} \sum_{k=0}^\infty \left(1/3 \right)^k
-  = \frac{1}{9} \,\, \frac{3}{2} = \frac{1}{6}.
-\]
-
-\end{frame}
 \end{frame}
-
-\end{document}
-
- 
-\noindent{\bf Product notation}
-
-{\bf Definition}  Let \(a\) be a sequence.  Define
-\[
-   \prod_{k=0}^n a_k = a_0 \, a_1 \, a_2 \dots a_n.
-\]
-When \(a\) is a constant sequence, say \(a_k = \alpha\) with
-\(\alpha \in \mathbf{R} \), we write
-\[
-   \prod_{k=0}^n \alpha = \alpha^{n+1}.
-\]
-The lower {\em product index\/} needn't be 0; for example
-\[
-  \prod_{k=1}^n a_k = a_1 \, a_2 \, a_3 \dots a_n.
-\]
-What should we do with goofy looking things like
-\(
-  \prod_{k=1}^0 a_k ?
-\)
-
-{\bf Examples}
-
-\begin{enumerate}
-
-\item[(a)] \( \prod_{k=0}^{n-1} (k+1) = 1 \cdot 2 \cdot 3 \dots n = n!
-  \)
-
-\item[(b)] \( \prod_{k=0}^n k = 0. \)
-
-\item[(c)] \(\prod_{k=0}^n 5 = 5^{n+1} \).
-
-\end{enumerate}
-
-
-
-\noindent{\bf \ding{95} Hypergeometric sequences}
-
-{\bf Definition}  A sequence \(a\) is {\em hypergeometric\/} provided
-
-\begin{enumerate}
-
-\item[(a)] There is a {\em rational function\/} \(q : \subset
-  \mathbf{R} \to \mathbf{R}\) such that 
-
-\item[(b)] \(\mathbf{Z}^+ \subset \mbox{dom}(q) \) and
-
-\item[(c)] the sequence \(a\) has a recursive definition 
-\[
-   a_{k+1} = \begin{cases} 1, & \mbox{ if } k = 0, \\
-                          q(k) a_k, & \mbox{ if } k > 0
-             \end{cases} .
-\]
-\end{enumerate}
-
-{\bf Examples} 
-
-\begin{enumerate} 
-
-\item[(a)] Let \(q(x) = 1\).  This function is rational and it's domain
-contains \(\mathbb{Z}^+\).  The sequence
-\[
-   a_{k+1} = \begin{cases} 1, & \mbox{ if } k = 0, \\
-            a_k, & \mbox{ if } k > 0  \end{cases} 
-\]
-is hypergeometric.  A formula for \(a\)
-\[
-   a_k  = 1.
-\]
-
-\item[(b)] Let  \(q(x) = \frac{1}{x+1}\).  This function is rational and it's domain
-contains \(\mathbb{Z}^+\).  The sequence
-\[
-   a_{k+1} = \begin{cases} 1, & \mbox{ if } k = 0, \\
-            \frac{1}{k+1} a_k, & \mbox{ if } k > 0  \end{cases} 
-\]
-is hypergeometric.  Computing \(a_1, a_2\), and \(a_3\), it becomes 
-apparent that a formula for \(a\)
-\[
-   a_k  = \frac{1}{k!}.
-\]
-
-\item[(c)] Let  \(q(x) = \frac{1}{(x+1)(x+\alpha)}\), where \(\alpha
-  \in \mathbf{C}\).  This function is rational and provided \(-\alpha 
-\notin \mathbb{Z}^+ \), the domain of \(q\)  contains
-\(\mathbb{Z}^+\). The sequence
-\[
-   a_{k+1} = \begin{cases} 1, & \mbox{ if } k = 0, \\
-            \frac{1}{(k+1)(k+\alpha)} a_k, & \mbox{ if } k > 0  \end{cases} 
-\]
-is hypergeometric.  Computing \(a_1, a_2\), and \(a_3\), it becomes 
-apparent that a formula for \(a\)
-\[
-   a_k  = \frac{1}{k! (\alpha)_k}.
-\]
-In the last line, we introduced the {\em Pochhammer sequence}.  For any
-\(\alpha \in \mathbf{C}\), define the Pochhammer sequence \((\alpha)\)
-as
-\[
-   (\alpha)_n = \begin{cases} 1, \mbox{ if } n = 0, \\
-                            \alpha (\alpha + 1) (\alpha + 2) \dots
-                            (\alpha + n - 1), \mbox{ if }
-                            n > 0.
-               \end{cases}
-\]
-
-\end{enumerate}
-
-{\bf Fact} If
-\[
-   a_{k+1} = \begin{cases} 1, & \mbox{ if } k = 0, \\
-                          q(k) a_k, & \mbox{ if } k > 0
-             \end{cases}
-\]
-a nonrecursive formula for \(a\) is 
-\[
-  a_n = \begin{cases}  1 &  \mbox{ if } n = 0, \\
-         \prod_{k=1}^{n} q(k) & \mbox{ if } n > 0
-        \end{cases}
-\]
-Using the convention 
-\[
-   \prod_{k=1}^{0} \mbox{anything} = 1,
-\]
-we can express the formula for \(a\) compactly as
-\[
-   a_n =  \prod_{k=1}^{n} q(k).
-\] 
-
-\clearpage
-
-{\bf \ding{95} Hypergeometric functions}
-
-A function \(F\) is said to be {\em hypergeometric\/} provided
-in a neighborhood of zero, \(F\) has a convergent power-series
-representation of the form
-\[
-   F(x) = \sum_{k=0}^\infty a_k x^k,
-\]
-where the sequence \(a\) is hypergeometric.
-
-The ratio test provides a quick method for finding
-the radius of convergence of any hypergeometric function.
-Suppose
-\[
-   a_{k+1} = q_k a_k
-\]
-The series
-\(
-   \sum_{k=0}^\infty a_k x^k
-\)
-converges provided
-\[
-    | x \lim_{k \to \infty} q(k) | < 1
-\]
-If \(\lim_{k \to \infty} q(k) = 0\), the series converges on
-\(\mathbf{R}\).
-
-
-
-{\bf Examples}  
-
-\begin{enumerate}
-
-\item[(a)] Let \(a\) be the hypergeometric sequence
-\( a_k = 1\). The function
-\[
-   F(x) = \sum_{k=0}^\infty x^k.
-\]
-is hypergeometric. Since
-\[
-  |x \lim_{k \to \infty}  1|  = |x|,
-\]
-the series converges on \((-1,1)\).
-
-A simple formula for \(F\) is
-\[
-   F(x) = \frac{1}{1-x}.
-\]
-This function is hypergeometric.
-
-\item[(b)] Let \(a\) be the hypergeometric sequence 
-\( a_k = \frac{1}{k!} \).  The function
-\[
-   F(x) = \sum_{k=0}^\infty \frac{1}{k!} x^k.
-\]
-is hypergeometric. Since
-\[
-   |x \lim_{k \to \infty} \frac{1}{k!}| = 0,
-\]
-the series converges on \(\mathbf{R}\).
-
-A simple formula for \(F\) is
-\[
-   F(x) = \exp(x).
-\]
-The natural exponential function is hypergeometric.
-
-
-\item[(c)] Let \(Q\) be the rational function
-\[
-  Q(x) = \frac{1}{x (x + \alpha - 1)},
-\]
-where \(\alpha \in \mathbf{C} \) and \(\alpha \neq  \dots -3, -2, -1, 0 \). 
-
-Let's find the sequence \(c\).  We have
-\begin{eqnarray*}
-  c_n &=& \prod_{k=1}^n  \frac{1}{k (k + \alpha -1)}  \\
-       &=& \frac{1}{1 \cdot 2 \cdot 3 \cdots n}  \,\,\,
-         \frac{1}{ \alpha \cdot (\alpha + 1) \cdot  \dots
-           (\alpha + n -1)}, \\
-       &=& \frac{1}{k! (\alpha)_n}
-\end{eqnarray*}
-
-
-%\begin{enumerate}
-
-\item[\ding{43}] Why the restriction  \(\alpha \neq  \dots -3, -2, -1
-  \)?  Yikes, for example \((-1)_1 = 0\), that's why.
-
-\item[\ding{43}] We won't define the Pochhammer symbol noninteger or negative
-subscripts (but we  could).
-
-\end{enumerate}
-
-The hypergeometric function associated with  \(Q(x) = \frac{1}{x (x +
-  \alpha - 1)},\) is
-\[
-  F(x) = \sum_{k=0}^\infty \frac{1}{k! (\alpha)_k} x^k.
-\]
-The ratio test tells us that the series converges on all of \(\mathbf{R}\).
-
-
-{\bf Question} Is there a name or a simple formula for \(F\)?  
-
-{\bf Answer} Yes and sometimes. The standard identifier for \(F\) is
-\[
-   \phantom{F}_0 F_1(\alpha; x) = \sum_{k=0}^\infty \frac{1}{k! (\alpha)_k} x^k.
-\]
-For special  values of \(\alpha\),  it's possible to express
- \(\phantom{F}_0F_1\) in terms of trigonometric functions and square roots.
- 
-%\end{enumerate}
 \end{document}
