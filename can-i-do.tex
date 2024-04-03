@@ -1,0 +1,186 @@
+\documentclass[portrait,fleqn,12pt]{beamer}
+\usetheme[progressbar=frametitle]{metropolis}
+\usepackage{amsmath}
+\usepackage{fleqn,amssymb,shadow}
+%\usepackage{pifont,enumerate}
+
+\usepackage{float}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{cancel}
+
+\raggedright
+\newcommand{\fma}{{\rm fma}}
+\newcommand{\reals}{\mathbf{R}}
+\newcommand{\epsmach}{\varepsilon_m}
+\newcommand{\mymax}{\mbox{max} \,\,}
+\newcommand{\mydeg}{\mbox{deg}}
+\newcommand{\dom}{\mbox{dom}}
+\newcommand{\fl}{\mbox{fl}}
+\newcommand{\rel}{\mbox{rel}}
+\newcommand{\cond}{\mbox{cond}}
+\newcommand{\bern}{\mathcal{B}}
+\newcommand{\order}{\mathcal{O}}
+\newcommand{\atan}{\rm{arctan}}
+
+\newcommand{\bfa}{\mathbf{a}}
+\newcommand{\bfb}{\mathbf{b}}
+\newcommand{\bfzero}{\mathbf{0}}
+\newcommand{\bfx}{\mathbf{x}}
+\usepackage{fontawesome5}
+
+\newenvironment{alphalist}
+   {\begin{enumerate}[(a)]
+       \addtolength{\itemsep}{0.0\itemsep}}
+     {\end{enumerate}}
+
+\newenvironment{handlist}
+   {\begin{enumerate}[\faHandPointRight]
+       \addtolength{\itemsep}{0.0\itemsep}}
+     {\end{enumerate}}
+     
+\newcommand{\complex}{\mathbf{C}}
+%\newcommand{\reals}{\mathbf{R}}
+\newcommand{\integers}{\mathbf{Z}}
+\newenvironment{define}[1]{
+  \textbf{Definition} #1}{}
+
+\newenvironment{idefine}[2]{
+  \index{#1}
+  \textbf{Definition} #2}{\(\blacktriangleleft\)}
+
+\newenvironment{myexample}[1]{
+  \textbf{Example} #1}
+
+
+\newenvironment{mynote}[1]{
+  \textbf{Note} #1}
+
+\usepackage{fourier}
+\begin{document}
+
+\begin{frame}
+\begin{flushleft} 
+\textbf{Can I do  X?} \\
+MATH 202 \\
+\today 
+\end{flushleft}
+
+
+\emph{“The law is reason unaffected by desire.”}  $\phantom{xxxx}$ \hfill {\sc Aristotle } 
+\end{frame}
+
+
+\begin{frame}[fragile]{Everything which is not forbidden is allowed}
+
+ Generally, in the legal system everything that is not explicitly forbidden is legal.  
+ 
+ \begin{handlist}
+ \item For example, in Kearney, backyard chickens are prohibited by
+ city code,  so chickens in town are illegal, 
+ 
+ 
+ \item but painting your house purple is legal because purple houses aren't mentioned in city code.
+
+ \end{handlist}
+ 
+ 
+ Of course, I'm not a lawyer, so \dots
+ \end{frame}
+ 
+ \begin{frame}{But math is different}
+ 
+\begin{itemize}
+\item[\faHandPointRight]But in math, most things that are  not explicitly allowed are forbidden.
+
+\item[\faHandPointRight] In the context of math,  the answer to the question ``Can I do X ?''  is ``if there is a rule for it, sure, if not, no way.''
+
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Exhaustive rules}
+
+Generally, the aim of algebra is to enumerate everything that is allowed. That means if it's not listed as rule, it's not true.
+
+\begin{handlist}
+\item The enumeration of the rules of exponents in our QRS attempts to  be exhaustive, so if something isn't listed likely
+it's not true.
+
+\item Also, generally it's the aim of algebra to condense rules to a minimal set of rules.  
+
+
+\item That means that sometimes something
+in algebra might be provably true from a minimal set of rules, but not explicitly stated as a rule.
+
+\end{handlist}
+
+\end{frame}
+
+\begin{frame}{For every means for every}
+
+Rubbish or nonrubbish:
+
+\begin{equation*}
+  \left(\forall a \in \reals_{\neq 0} \right)\left(\frac{a+b}{a} = 1 + b \right) \equiv \text{True}
+\end{equation*}
+
+This is abject rubbish. To show this, choose $a=2$ and $b=5$, then
+\begin{equation*}
+    \left[ \frac{2+5}{2} = 1+5 \right] \equiv   \left[ \frac{7}{2} = 6 \right]  \equiv \left[ 7 = 12\right]  \equiv \text{False}.
+\end{equation*}
+
+\begin{handlist}
+\item Checking a special case for a ``for every'' statement is a powerful way to possibly show that it is false.
+\end{handlist}
+
+\end{frame}
+
+\begin{frame}{Can I do \dots}
+
+\begin{theorem}[multiplicative cancellation] We have 
+\begin{equation*} 
+   \left(\forall a, c\in \reals_{\neq 0}, c \in \reals \right)\left(\frac{a b}{a c} = \frac{b}{c} \right) \equiv \text{True}.
+  \end{equation*}
+\end{theorem}
+
+\begin{handlist}
+\item In words, this says that a common nonzero \emph{multiplicative} factor in a numerator and denominator can be ``canceled.''
+
+\item Functionally, we write 
+$
+\frac{\cancel{a} b}{ \cancel{a} c}  = \frac{b}{c}.
+$
+
+\item Provided that $a$ and $c$ are  nonzero, replacing
+$\frac{ab}{ac}$ by $\frac{b}{c}$ in any statement doesn't change the meaning (or truth value) of the statement.
+\end{handlist}
+
+\end{frame}
+
+\begin{frame}{Avoiding slang}
+
+\begin{handlist}
+
+\item The verb ``canceled'' is mathematical slang--its use is convenient, but it's  subject to abuse.  
+
+\item A problem with slang is that it is often  poorly defined and misused.  And example of misuse is the \textbf{bogus cancellation}
+\begin{equation*}
+   \frac{a+b}{a+c} =  \frac{\cancel{a}+b}{\cancel{a} +c} = \frac{b}{c}.
+\end{equation*}
+
+\item Our rule says that a common \emph{multiplicative factor} in the numerator and denominator can be canceled, but in this example,
+the common term is additive, not multiplicative.
+\end{handlist}
+
+
+
+
+\end{frame}
+
+
+
+
+
+\end{document}
