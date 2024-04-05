@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2024.1.24)  5 APR 2024 10:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2024.1.24)  5 APR 2024 10:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -856,74 +856,69 @@ LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on in
 {C:/Users/willisb/AppData/Roaming/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free1.enc}]
 
 LaTeX Warning: The counter will not be printed.
-             The label is: \faHandPointRight  on input line 93.
+             The label is: \faHandPointRight  on input line 94.
 
 [3
 
 ]
 
 LaTeX Warning: The counter will not be printed.
-             The label is: \faHandPointRight  on input line 106.
+             The label is: \faHandPointRight  on input line 107.
 
 [4
 
 ]
 
 LaTeX Warning: The counter will not be printed.
-             The label is: \faHandPointRight  on input line 120.
+             The label is: \faHandPointRight  on input line 121.
 
 [5
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 142.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 140.
  (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 142.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 140.
  (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 142.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 140.
  (C:\Users\willisb\AppData\Roaming\MiKTeX\tex/latex/sansmathaccent\ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
-)
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <12> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 142.
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 142.
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 142.
-
-
-LaTeX Warning: The counter will not be printed.
-             The label is: \faHandPointRight  on input line 142.
-
-[6
+) [6
 
 ]
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <12> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 160.
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <8> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 160.
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 160.
+
 
 LaTeX Warning: The counter will not be printed.
-             The label is: \faHandPointRight  on input line 156.
+             The label is: \faHandPointRight  on input line 160.
 
 [7
 
 ]
-Overfull \hbox (7.6398pt too wide) detected at line 172
- $[] \OMS/cmsy/m/n/12 ^^Q [] ^^Q [] ^^Q []$ 
- []
+
+LaTeX Warning: The counter will not be printed.
+             The label is: \faHandPointRight  on input line 174.
 
 [8
 
-] [9
+]
+Overfull \hbox (7.6398pt too wide) detected at line 190
+ $[] \OMS/cmsy/m/n/12 ^^Q [] ^^Q [] ^^Q []$ 
+ []
+
+[9
 
 ] [10
 
-]
-
-LaTeX Warning: The counter will not be printed.
-             The label is: \faHandPointRight  on input line 224.
-
-[11
+] [11
 
 ]
 
@@ -932,18 +927,21 @@ LaTeX Warning: The counter will not be printed.
 
 [12
 
-] [13
+]
+
+LaTeX Warning: The counter will not be printed.
+             The label is: \faHandPointRight  on input line 260.
+
+[13
+
+] [14
 
 ]
 
 LaTeX Warning: The counter will not be printed.
-             The label is: \faHandPointRight  on input line 287.
+             The label is: \faHandPointRight  on input line 305.
 
-
-Overfull \vbox (6.75612pt too high) detected at line 287
- []
-
-[14
+[15
 
 ]
 \tf@nav=\write6
@@ -964,17 +962,17 @@ Package rerunfilecheck Info: File `can-i-do.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 28531 strings out of 474485
- 579408 string characters out of 5753497
+ 28538 strings out of 474485
+ 579461 string characters out of 5753497
  1935542 words of memory out of 5000000
- 50221 multiletter control sequences out of 15000+600000
- 568513 words of font info for 72 fonts, out of 8000000 for 9000
+ 50224 multiletter control sequences out of 15000+600000
+ 569113 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,123p,1975b,738s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/willisb/AppData/Roaming/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/euler/eurm10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb>
-Output written on can-i-do.pdf (14 pages, 184075 bytes).
+<C:/Users/willisb/AppData/Roaming/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/euler/eurm10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb>
+Output written on can-i-do.pdf (15 pages, 195198 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
- 29 named destinations out of 1000 (max. 500000)
+ 179 PDF objects out of 1000 (max. 8388607)
+ 31 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
