@@ -1,0 +1,115 @@
+\documentclass[12pt,fleqn]{exam}
+%\usepackage{pifont}
+%\usepackage{dingbat,bbding}
+
+\usepackage{amssymb}
+\usepackage[intlimits]{amsmath}
+\usepackage{epsfig}
+\usepackage{upgreek}
+\usepackage[super]{nth}
+\usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}
+\usepackage[letterpaper, margin=0.75in]{geometry}
+\addpoints
+\boxedpoints
+\pointsinmargin
+\pointname{pts}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{calc}
+\usepackage[final]{microtype}
+\frenchspacing
+\usepackage[american]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[]{fourier}
+\usepackage{isomath}
+\usepackage{upgreek,amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\newcommand{\dotprod}{\, {\scriptzcriptztyle\stackrel{\bullet}{{}}}\,}
+
+\newcommand{\reals}{\mathbf{R}}
+\newcommand{\lub}{\mathrm{lub}} 
+\newcommand{\glb}{\mathrm{glb}} 
+\newcommand{\complex}{\mathbf{C}}
+\newcommand{\dom}{\mbox{dom}}
+\newcommand{\range}{\mbox{range}}
+\newcommand{\cover}{{\mathcal C}}
+\newcommand{\integers}{\mathbf{Z}}
+\newcommand{\vi}{\, \mathbf{i}}
+\newcommand{\vj}{\, \mathbf{j}}
+\newcommand{\vk}{\, \mathbf{k}}
+\newcommand{\bi}{\, \mathbf{i}}
+\newcommand{\bj}{\, \mathbf{j}}
+\newcommand{\bk}{\, \mathbf{k}}
+\DeclareMathOperator{\Arg}{\mathrm{Arg}}
+\DeclareMathOperator{\Ln}{\mathrm{Ln}}
+\newcommand{\imag}{\, \mathrm{i}}
+
+\newtheorem{theorem}{Theorem}
+\usepackage{graphicx}
+\usepackage{color}
+%\shadedsolutions
+%\definecolor{SolutionColor}{rgb}{1,0.72,0.46} %{0.8,0.9,1}
+\newcommand\AM{\textsc{am}}
+\newcommand\PM{\textsc{pm}}
+     
+\newcommand{\quiz}{13}
+\newcommand{\term}{Spring}
+\newcommand{\due}{Tuesday 19 March  13:20}
+\newcommand{\class}{MATH 202, Spring \the\year}
+\begin{document}
+\large
+\vspace{0.1in}
+\noindent\makebox[3.0truein][l]{\textbf{\class}}
+\textbf{Name:} \hrulefill \\
+\noindent \makebox[3.0truein][l]{\textbf{In class work  \quiz}}
+\textbf{Row and Seat}:\hrulefill\\
+\vspace{0.1in}
+\vspace{0.1in}
+\noindent  In class work  \textbf{\quiz\/}  has questions \textbf{1} through  \textbf{\numquestions} \/ with a total of \textbf{\numpoints\/}  points.   
+
+\vspace{0.1in}
+
+\noindent  \emph{``A linguistic construction is called referentially transparent when for any expression built from it, replacing a subexpression with another one that denotes the same value does not change the value of the expression.''}  \hfill  (Wikipedia)
+
+\begin{theorem}[CT] Let $a$ and $b$ be seqences. And suppose that $\left(\forall k \in \integers_{\geq 0}\right)(0 \leq a_k \leq b_k)$. Then 
+$\sum b \text{ converges } \implies \sum a  \text{ converges}.$
+\end{theorem}
+
+
+\begin{theorem}[LCT] Let $a$ and $b$ be seqences. And suppose that there is and integer $N$ such that for all $k \in \integers_{\geq N}$, we have
+$0 < a_k$ and $0 < b_k$. Then
+\begin{itemize}
+ \item $\displaystyle \lim_{k \to \infty} \left(\frac{a_k}{b_k} \right) \in \reals_{>0} \implies  \left( \sum a  \text{ converges} \equiv \sum b  \text{ converges} \right) $
+ \item $\displaystyle \lim_{k \to \infty} \left( \frac{a_k}{b_k} \right) = 0 \implies  \left( \sum b  \text{ converges} \implies \sum a  \text{ converges} \right) $
+  \item $\displaystyle \lim_{k \to \infty} \left(\frac{a_k}{b_k} \right) = \infty  \implies  \left( \sum a  \text{ converges} \implies \sum b  \text{ converges} \right) $
+ 
+ 
+\end{itemize}
+
+
+\end{theorem}
+\begin{questions}
+
+\question [2] Use the CT to show that $\sum_{k=0}^\infty  \frac{1}{k^2 + k + 28}$ converges.
+
+\newpage
+
+
+\question [2] Use the LCT to show that $\sum_{k=0}^\infty \begin{cases} (-1)^k k! & k < 10^9 \\   \frac{1}{k^8 + 1} & k \geq 10^9 \end{cases}$ converges.
+
+
+
+\newpage 
+
+\question [2] After an arduous calcuation spanning tweleve pages of engineering paper, my friend Lilly Poole has (correctly) shown that
+\begin{equation*}
+\int_{0}^{\infty }{\left. \frac{1}{{{x}^{8}}\operatorname{+}1} \, \mathrm{d} x\right.}\operatorname{=}\frac{\ensuremath{\uppi} }{8 \sin{\left( \frac{\ensuremath{\uppi} }{8}\right) }}.
+\end{equation*}
+After that, Ms.\ Poole (spouse of Mr.\  Wade Poole) cocludes that $\sum_{k=0}^\infty \frac{1}{1+k^8} = \frac{\ensuremath{\uppi} }{8 \sin{\left( \frac{\ensuremath{\uppi} }{8}\right) }}$.
+Is  Ms.\ Poole's conclusion correct? Explain.
+
+\end{questions}
+\end{document}
