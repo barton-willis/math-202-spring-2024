@@ -75,7 +75,7 @@ MATH 202 \\
 In the legal system, generally, everything not forbidden is legal.  
 
 \begin{handlist}
- \item In K-Town, city code prohibits yard chickens, making  yard birds illegal, 
+ \item In K-Town, city code prohibits backyard chickens, making  yard birds illegal, 
  
  \item but painting your house purple is legal because it's not mentioned in city code.
  \end{handlist}
@@ -145,17 +145,46 @@ $
 
 \begin{handlist}
 
-\item The verb ``canceled''  is mathematical slang.  
+\item The verb ``cancel''  is mathematical slang.  
 \item Slang is poorly defined, so it  often gets misused. An example of misuse is the \textbf{bogus cancellation}:
 \begin{equation*}
-   \frac{a+b}{a+c} =  \frac{\cancel{a}+b}{\cancel{a} +c} = \frac{b}{c}.
+   \frac{a+b}{a+c} =  \frac{\cancel{a}+b}{\cancel{a} +c} = \frac{1 + b}{1 + c}.
 \end{equation*}
 \item Our rule says that a common \emph{multiplicative factor} in the numerator and denominator can be canceled, but in this example, the common term is additive, not multiplicative.
 \end{handlist}
 
 \end{frame}
 
+\begin{frame}{One bad apple}
+\begin{theorem}
+  \begin{equation*}
+    \left(\exists a,b,c \in \reals_{>0}\right)
+       \left(\frac{a+b}{a+c} \neq \frac{1 + b}{1 + c} \right) \equiv \mbox{True}.
+ \end{equation*}
+\end{theorem}
+\begin{proof} Choose $a=2,b=3$, and $c=4$. We have
+  \begin{equation*}
+    \left[\frac{a+b}{a+c} \neq \frac{1 + b}{1 + c} \right] \equiv
+    \left[\frac{2+3}{2+4} \neq \frac{1 + 3}{1 + 4} \right]  \equiv
+    \left [\frac{5}{6} \neq \frac{4}{5} \right]  \equiv \mbox{True!}
+  \end{equation*}
+\end{proof}
+\end{frame}
 
+\begin{frame}{One bad apple redux}
+  \begin{theorem}
+    \begin{equation*}
+      \left(\forall  a,b,c \in \reals_{>0}\right)
+         \left(\frac{a+b}{a+c} = \frac{1 + b}{1 + c} \right) \equiv \mbox{False}.
+   \end{equation*}
+  \end{theorem}
+  \begin{proof} The given statement is logically equivalent to 
+    \begin{equation*}
+      \left(\exists a,b,c \in \reals_{>0}\right)
+      \left(\frac{a+b}{a+c} \neq \frac{1 + b}{1 + c} \right) \equiv \mbox{True}.
+    \end{equation*}
+    \end{proof}
+  \end{frame}
 
 
 \begin{frame}{For every means for every}
@@ -180,7 +209,7 @@ is legitimate.  We matched $a$ with $z^2 + 1$,  matched $b$ with $ \cos(\uppi x)
 
 Consider the statement:
 \begin{equation*}
-  \left(\forall a \in \reals_{\neq 0} \right)\left(\frac{a+b}{a} = 1 + b \right) \equiv \text{True}
+  \left(\forall a \in \reals_{\neq 0} \right)\left(\frac{a+b}{a} = 1 + b \right).
 \end{equation*}
 
 This statement is false. For instance, if we choose $a=2$ and $b=5$, then
@@ -204,7 +233,7 @@ $$
   \cos(x (x-1)) = \cos(x^2 - x).
 $$
 
-\item Generally, mathematics is referentially transparent.  \textbf{But}
+\item Generally, mathematical notation is referentially transparent.  \textbf{But}
 
 \item the question ``Does $\sum_{k=0}^\infty \frac{1}{2^k}$ converge?'' violates referential transparency. That's because
 the question ``Does  $1 $ converge?'' is silly, yet  $\sum_{k=0}^\infty \frac{1}{2^k} = 1$ is true.
@@ -212,19 +241,47 @@ the question ``Does  $1 $ converge?'' is silly, yet  $\sum_{k=0}^\infty \frac{1}
 
 \end{frame}
 
+\begin{frame}{Referential transparency minutia}
+
+
+  Since `people' and `human' are synonyms, the statement
+  \begin{quote}
+     All people are created equal.
+  \end{quote}
+has the same meaning as
+\begin{quote}
+  All humans are created equal.
+\end{quote}
+But the statement
+\begin{quote}
+  Larry said, ``All people are created equal."
+\end{quote}
+could be true while 
+\begin{quote}
+  Larry said, ``All humans are created equal."
+\end{quote}
+could be false.
+
+
+  
+\end{frame}
 
 \begin{frame}{Mathematical taxonomy}
 
 
-Imagine that you are a turkey. If you can recognize that a tree is an oak (taxonomy), you've located a source of tasty acorns.
+Imagine that you are a turkey. If you can recognize that a tree is an oak (taxonomy), 
+you have located a source of tasty acorns. It doesn't matter if the tree is a red or white oak--regardless
+it's food.
+
 
  Mathematical taxonomy (categorization  and  classification)  is a useful way to build an effective problem solving strategy. 
  Examples
 \begin{handlist}
 
 
-\item If  you can recognize an integrand is the product of a polynomial and an exponential function, use IBP.
-\item To find a limit of an indeterminate form, use the L'Hôpital rule.
+\item If  you can recognize an integrand is the product of a polynomial and an 
+exponential function (taxonomy), use IBP.
+\item To find a limit of an indeterminate form  (taxonomy), use the L'Hôpital rule.
 
 \end{handlist}
 \end{frame}
