@@ -124,10 +124,11 @@ In algebra, we attempt to enumerate everything that is allowed. If something isn
 
 In the section on antideriatives, our book \textbf{doesn't} list
 \begin{equation*}
-    \int f(x) g(x) \, \mathrm{d} x = \int f(x) \, \mathrm{d} x 
-     \times \int g(x) \, \mathrm{d} x 
+ \left(\exists \text{ functions} f,g \right) \left(
+    \int f(x) g(x) \, \mathrm{d} x \neq  \int f(x) \, \mathrm{d} x 
+     \times \int g(x) \, \mathrm{d} x \right)
 \end{equation*}
-as a rule. Why not? Because it's abject rubbish:
+as a nonrule. But it is a nonrule because 
 \begin{equation*}
   \int x^2 x^3 \, \mathrm{d} x = \int x^5 \, \mathrm{d} x = \frac{1}{6} x^6
 \end{equation*}
@@ -136,6 +137,10 @@ But
   \int x^2 \mathrm{d} x \times \int x^3 \mathrm{d} x  = \frac{1}{12} x^7.
 \end{equation*}
 
+\begin{handlist}
+\item Enumerating all nonrules would use up lots of paper.
+\item So generally we don't try.
+\end{handlist}
   
 \end{frame}
 
