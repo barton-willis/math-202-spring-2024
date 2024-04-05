@@ -7,8 +7,8 @@
 \usepackage{enumerate}
 \usepackage{cancel}
 \usepackage{fontawesome5}
-\usepackage{fourier}
-
+%\usepackage{fourier}
+\usepackage{upgreek}
 \raggedright
 
 % Custom commands
@@ -72,10 +72,10 @@ MATH 202 \\
 
 \begin{frame}[fragile]{Everything which is not forbidden is allowed}
 
-In the legal system, generally, everything not explicitly forbidden is legal.  
+In the legal system, generally, everything not forbidden is legal.  
 
 \begin{handlist}
- \item For example, in Kearney, backyard chickens are prohibited by city code, making them illegal, 
+ \item In K-Town, city code prohibits yard chickens, making  yard birds illegal, 
  
  \item but painting your house purple is legal because it's not mentioned in city code.
  \end{handlist}
@@ -83,13 +83,26 @@ In the legal system, generally, everything not explicitly forbidden is legal.
  However, I'm not a lawyer, so \dots
 \end{frame}
  
-\begin{frame}{But math is different}
+\begin{frame}{Math is different}
  
-\begin{itemize}
+\begin{handlist}
 \item[\faHandPointRight] In math, most things not explicitly allowed are forbidden.
-\item[\faHandPointRight] In math, a pretty good answer to the answer to the question "Can I do X?"  is "if there is a rule for it, sure; if not, no way."
-\end{itemize}
+\item[\faHandPointRight] In math, a snarky answer to the question "Can I do X?"  is``If there is an explicit  rule for it, sure; if not, no way.''
+\end{handlist}
  \vfill
+\end{frame}
+
+\begin{frame}{Undistracted by the question}
+
+\begin{handlist}
+\item To remain in power, politicians need to be \emph{undistracted by the question.}
+
+\item Math teachers need this skill too.
+
+\item A nonsnarky, but evasive,  answer to the question  "Can I do X?" is ``Maybe, but let's think about a strategy first.'' 
+
+\item We'll return to strategy in a bit.
+\end{handlist}
 \end{frame}
 
 \begin{frame}{Exhaustive rules}
@@ -97,45 +110,69 @@ In the legal system, generally, everything not explicitly forbidden is legal.
 In algebra, we attempt to enumerate everything that is allowed. If something isn't listed as a rule, likely it's not true.
 
 \begin{handlist}
-\item The enumeration of rules of exponents in our QRS aims to be exhaustive.
+\item The list of rules of exponents in our QRS aims to be exhaustive.
 
-\item  But algebra tries to condense rules to a minimal set, so sometimes something might be provably true from a set of rules but not explicitly stated.
+\item  Often in math, we try  to condense rules to a minimal set, 
+
+\item so sometimes something might be true, but not explicitly stated as a rule.
 \end{handlist}
 
 \end{frame}
 
 
 
-\begin{frame}{Can I do \dots}
+\begin{frame}{What's a  rule?}
 
 \begin{theorem}[multiplicative cancellation] We have 
 \begin{equation*} 
-   \left(\forall a, c\in \reals_{\neq 0}, c \in \reals \right)\left(\frac{a b}{a c} = \frac{b}{c} \right) \equiv \text{True}.
+   \left(\forall a, c\in \reals_{\neq 0}, b \in \reals \right)\left(\frac{a b}{a c} = \frac{b}{c} \right) \equiv \text{True}.
   \end{equation*}
 \end{theorem}
 
 \begin{handlist}
-\item In words, this says that a common nonzero \emph{multiplicative} factor in a numerator and denominator can be "canceled."
+\item In words, this says that a common nonzero \emph{multiplicative} factor in a numerator and denominator can be ``canceled.''
 \item Notationally, we write 
 $
 \frac{\cancel{a} b}{ \cancel{a} c}  = \frac{b}{c}.
 $
-\item Provided that $a$ and $c$ are nonzero, replacing $\frac{ab}{ac}$ by $\frac{b}{c}$ in any statement doesn't change its meaning (or truth value).
+\item Replacing $\frac{a b}{a c}$ by $\frac{b}{c}$ is generally regarded as a \emph{simplification.}
+
 \end{handlist}
 
 \end{frame}
 
-\begin{frame}{Avoiding slang}
+\begin{frame}{Avoid slang}
 
 \begin{handlist}
 
-\item The verb "canceled" is mathematical slang—its use is convenient but subject to abuse.  
-\item A problem with slang is that it is often poorly defined and misused. An example of misuse is the \textbf{bogus cancellation}:
+\item The verb ``canceled''  is mathematical slang.  
+\item Slang is poorly defined, so it  often gets misused. An example of misuse is the \textbf{bogus cancellation}:
 \begin{equation*}
    \frac{a+b}{a+c} =  \frac{\cancel{a}+b}{\cancel{a} +c} = \frac{b}{c}.
 \end{equation*}
 \item Our rule says that a common \emph{multiplicative factor} in the numerator and denominator can be canceled, but in this example, the common term is additive, not multiplicative.
 \end{handlist}
+
+\end{frame}
+
+
+
+
+\begin{frame}{For every means for every}
+
+To apply the multiplicative cancellation rule
+\begin{equation*} 
+   \left(\forall a, c\in \reals_{\neq 0}, b \in \reals \right)\left(\frac{a b}{a c} = \frac{b}{c} \right) \equiv \text{True}.
+  \end{equation*}
+ we don't need a literal match (a syntactic match) with $\frac{a b}{a c}$; rather $a,b$, and $c$ can match with any `blob,'  as long as
+ the `blobs'  $a$ and $c$ are nonvanishing.
+ 
+For example
+\begin{equation*}
+   \frac{ \cos(\uppi x) \cancel{ (z^2 + 1)}}{ \cancel{z^2 + 1} } =  \cos(\uppi x)
+\end{equation*}
+is legitimate.  We matched $a$ with $z^2 + 1$,  matched $b$ with $ \cos(\uppi x) $, and matched $c$ with 1.
+
 
 \end{frame}
 
@@ -152,9 +189,46 @@ This statement is false. For instance, if we choose $a=2$ and $b=5$, then
 \end{equation*}
 
 \begin{handlist}
-\item Checking a special case for a "for every" statement is a powerful way to possibly show that it is false.
+\item Checking a special case for a ``for every''  statement is a powerful way to possibly show that it is false.
 \end{handlist}
 
 \end{frame}
+
+\begin{frame}{Referential transparency}
+
+\emph{Referential transparency} is a fancy term that means that we can substitute like for like without changing meaning.  
+
+\begin{handlist}
+\item Since for all real $x$, we have $x (x-1) = x^2 -x$, it's also the case that for all real $x$, we have
+$$
+  \cos(x (x-1)) = \cos(x^2 - x).
+$$
+
+\item Generally, mathematics is referentially transparent.  \textbf{But}
+
+\item the question ``Does $\sum_{k=0}^\infty \frac{1}{2^k}$ converge?'' violates referential transparency. That's because
+the question ``Does  $1 $ converge?'' is silly, yet  $\sum_{k=0}^\infty \frac{1}{2^k} = 1$ is true.
+\end{handlist}
+
+\end{frame}
+
+
+\begin{frame}{Mathematical taxonomy}
+
+
+Imagine that you are a turkey. If you can recognize that a tree is an oak (taxonomy), you've located a source of tasty acorns.
+
+ Mathematical taxonomy (categorization  and  classification)  is a useful way to build an effective problem solving strategy. 
+ Examples
+\begin{handlist}
+
+
+\item If  you can recognize an integrand is the product of a polynomial and an exponential function, use IBP.
+\item To find a limit of an indeterminate form, use the L'Hôpital rule.
+
+\end{handlist}
+\end{frame}
+
+
 \end{document}
 
