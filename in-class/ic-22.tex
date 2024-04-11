@@ -1,0 +1,108 @@
+\documentclass[12pt,fleqn]{exam}
+\usepackage{amssymb}
+\usepackage[intlimits]{amsmath}
+\usepackage{epsfig}
+\usepackage{upgreek}
+\usepackage[super]{nth}
+\usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}
+\usepackage[letterpaper, margin=0.75in]{geometry}
+\addpoints
+\boxedpoints
+\pointsinmargin
+\pointname{pts}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{calc}
+\usepackage[final]{microtype}
+\frenchspacing
+\usepackage[american]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[]{fourier}
+\usepackage{isomath}
+\usepackage{upgreek,amsmath}
+\usepackage{graphicx}
+
+\newcommand{\dotprod}{\, {\scriptzcriptztyle\stackrel{\bullet}{{}}}\,}
+
+\newcommand{\reals}{\mathbf{R}}
+\newcommand{\lub}{\mathrm{lub}} 
+\newcommand{\glb}{\mathrm{glb}} 
+\newcommand{\complex}{\mathbf{C}}
+\newcommand{\dom}{\mbox{dom}}
+\newcommand{\range}{\mbox{range}}
+\newcommand{\cover}{{\mathcal C}}
+\newcommand{\integers}{\mathbf{Z}}
+\newcommand{\vi}{\, \mathbf{i}}
+\newcommand{\vj}{\, \mathbf{j}}
+\newcommand{\vk}{\, \mathbf{k}}
+\newcommand{\bi}{\, \mathbf{i}}
+\newcommand{\bj}{\, \mathbf{j}}
+\newcommand{\bk}{\, \mathbf{k}}
+\DeclareMathOperator{\Arg}{\mathrm{Arg}}
+\DeclareMathOperator{\Ln}{\mathrm{Ln}}
+\newcommand{\imag}{\, \mathrm{i}}
+
+\usepackage{graphicx}
+\usepackage{color}
+%\shadedsolutions
+%\definecolor{SolutionColor}{rgb}{1,0.72,0.46} %{0.8,0.9,1}
+\newcommand\AM{\textsc{am}}
+\newcommand\PM{\textsc{pm}}
+     
+\newcommand{\quiz}{22}
+\newcommand{\term}{Fall}
+\newcommand{\due}{Thursday 11 April 13:20}
+\newcommand{\class}{MATH 202, Fall \the\year}
+\begin{document}
+%\large
+\vspace{0.1in}
+\noindent\makebox[3.0truein][l]{\textbf{\class}}
+\textbf{Name:} \hrulefill \\
+\noindent \makebox[3.0truein][l]{\textbf{In class work  \quiz}}
+\textbf{Row and Seat}:\hrulefill\\
+
+\noindent \emph{“I'm killing time while I wait for life to shower me with meaning and happiness.” } \hfill {\sc Calvin}
+
+\vspace{0.1in}
+
+\noindent  In class work  has questions \textbf{1} 
+through  \textbf{\numquestions} \/ with a total of 
+\textbf{\numpoints\/} points. Turn in your work at the end of class 
+\emph{on paper}. This assignment is due \emph{\due}.
+
+\vspace{0.1in}
+
+
+\noindent On family math night, my friends Bea and Ernest Kind used the ratio test to prove that the power series $\sum_{k=0}^\infty \frac{x^k}{k!}$ converges for
+all real numbers $x$.  In honor of their teenager  Emma Kind, Bea and Ernest define a function $E(x) = \sum_{k=0}^\infty \frac{x^k}{k!}$, where the domain of $E$ is all real numbers.
+
+\begin{questions} 
+
+\question[2] Find the numerical value of $E(0)$; find the numerical value of $E^\prime(0)$.To find these values, go to your happy place: we have
+$E(x) = 1 + x + \frac{x^2}{2} +  \frac{x^3}{6} +  \frac{x^4}{24} + \cdots.$
+\begin{solution}[1.5in]
+\end{solution}
+\question[2] Bea and Ernest are curious about the graph of the equation $y = E(x)$. They realize that summing to infinity isn't really an option, so they ask their favorite graphing tool to
+graph $y = \sum_{k=0}^{42} \frac{x^k}{k!}$. They reason that for since the factorial grows very quickly that sum of the first 43 terms will be a good approximation to $E$, at least for
+modest values of $x$.      Ask your favorite graphing tool to graph $y = \sum_{k=0}^{42} \frac{x^k}{k!}$. Does the graph look like a function that has a standard name? Reproduce
+the graph here:
+\begin{solution}[3.5in]
+\end{solution}
+
+\newpage
+\question[2]  Find the power series for $E^\prime$. Change the sum index so that the least sum index is one.   Is there a conspiracy between $E(x)$ and $E^\prime(x)$? If so, what is it?
+\begin{solution}[3.5in]
+\end{solution}
+
+
+\question[2] What is the standard name for the function $E$?
+\begin{solution}[3.5in]
+\end{solution}
+
+
+
+
+
+\end{questions}
+\end{document}
