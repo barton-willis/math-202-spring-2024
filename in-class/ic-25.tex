@@ -1,0 +1,108 @@
+\documentclass[12pt,fleqn]{exam}
+\usepackage{amssymb}
+\usepackage[intlimits]{amsmath}
+\usepackage{epsfig}
+\usepackage{upgreek}
+\usepackage[super]{nth}
+\usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}
+\usepackage[letterpaper, margin=0.75in]{geometry}
+\addpoints
+\boxedpoints
+\pointsinmargin
+\pointname{pts}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{calc}
+\usepackage[final]{microtype}
+\frenchspacing
+\usepackage[american]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[]{fourier}
+
+\usepackage{isomath}
+\usepackage{upgreek,amsmath}
+\usepackage{graphicx}
+
+\newcommand{\dotprod}{\, {\scriptzcriptztyle\stackrel{\bullet}{{}}}\,}
+
+\newcommand{\reals}{\mathbf{R}}
+\newcommand{\lub}{\mathrm{lub}} 
+\newcommand{\glb}{\mathrm{glb}} 
+\newcommand{\complex}{\mathbf{C}}
+\newcommand{\dom}{\mbox{dom}}
+\newcommand{\range}{\mbox{range}}
+\newcommand{\cover}{{\mathcal C}}
+\newcommand{\integers}{\mathbf{Z}}
+\newcommand{\vi}{\, \mathbf{i}}
+\newcommand{\vj}{\, \mathbf{j}}
+\newcommand{\vk}{\, \mathbf{k}}
+\newcommand{\bi}{\, \mathbf{i}}
+\newcommand{\bj}{\, \mathbf{j}}
+\newcommand{\bk}{\, \mathbf{k}}
+\DeclareMathOperator{\Arg}{\mathrm{Arg}}
+\DeclareMathOperator{\Ln}{\mathrm{Ln}}
+\DeclareMathOperator{\sign}{\mathrm{sign}}
+\newcommand{\imag}{\, \mathrm{i}}
+\newcommand{\erf}{\mathrm{erf}}
+\newcommand{\e}{\mathrm{e}}
+
+\usepackage{graphicx}
+\usepackage{color}
+%\shadedsolutions
+%\definecolor{SolutionColor}{rgb}{1,0.72,0.46} %{0.8,0.9,1}
+\newcommand\AM{\textsc{am}}
+\newcommand\PM{\textsc{pm}}
+
+
+     
+\newcommand{\quiz}{25}
+\newcommand{\term}{Spring}
+\newcommand{\due}{Tuesday 30 April 13:20}
+\newcommand{\class}{MATH 202, Spring \the\year}
+\begin{document}
+\large
+\noindent\makebox[3.0truein][l]{\textbf{\class}}
+\textbf{Name:} \hrulefill \\
+\noindent \makebox[3.0truein][l]{\textbf{In class work  \quiz}}
+\textbf{Row and Seat}:\hrulefill\\
+
+
+\noindent \emph{“Finding Nirvana is like locating silence.”} \hfill {\sc Jack Kerouac}
+
+\vspace{0.1in}
+\noindent  In class work  \textbf{\quiz}  has questions \textbf{1} 
+through  \textbf{\numquestions} \/ with a total of 
+\textbf{\numpoints\/} points. Turn in your work at the end of class 
+\emph{on paper}. This assignment is due at \emph{\due}.
+
+
+
+
+
+
+\noindent Define a curve $\mathcal{C} = \begin{cases} x = \sign(t) \sqrt{|t|} \cos(|t|) \\ 
+                                                                  y = \sign(t) \sqrt{|t|} \sin(|t|) 
+                                             \end{cases} \, t \in [-3 \uppi, 3 \uppi]$.  The function $\sign$ is defined as
+ $\sign(x) = \begin{cases} -1 & x < 0 \\  0 & x = 0 \\ 1 & x > 0 \end{cases}$.     
+ Wikipedia tells me that this curve has been used for an ``efficient layout for the mirrors of concentrated solar power 
+ plants.''                                      
+                                          
+\begin{questions} 
+  
+  \question[2] Ask Desmos to draw  $\mathcal{C}$. As best you can, reproduce the curve here.
+  
+  \begin{solution}[2.5in]
+  \end{solution}
+  
+  \question [2] Find $\displaystyle \left. \frac{\mathrm{d} y}{\mathrm{d} x} \right \vert_{t = \uppi/2}$
+    \begin{solution}[2.5in]
+  \end{solution}
+  
+    \question [2] Find $\displaystyle \left. \frac{\mathrm{d}^2  y}{\mathrm{d} x^2} \right \vert_{t = \uppi/2}$
+    \begin{solution}[2.5in]
+  \end{solution}
+  
+  
+  \end{questions}
+  \end{document}
