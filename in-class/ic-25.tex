@@ -1,0 +1,117 @@
+\documentclass[12pt,fleqn]{exam}
+\usepackage{amssymb}
+\usepackage[intlimits]{amsmath}
+\usepackage{epsfig}
+\usepackage{upgreek}
+\usepackage[super]{nth}
+\usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}
+\usepackage[letterpaper, margin=0.75in]{geometry}
+\addpoints
+\boxedpoints
+\pointsinmargin
+\pointname{pts}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{calc}
+\usepackage[final]{microtype}
+\frenchspacing
+\usepackage[american]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[]{fourier}
+
+\usepackage{isomath}
+\usepackage{upgreek,amsmath}
+\usepackage{graphicx}
+
+\newcommand{\dotprod}{\, {\scriptzcriptztyle\stackrel{\bullet}{{}}}\,}
+
+\newcommand{\reals}{\mathbf{R}}
+\newcommand{\lub}{\mathrm{lub}} 
+\newcommand{\glb}{\mathrm{glb}} 
+\newcommand{\complex}{\mathbf{C}}
+\newcommand{\dom}{\mbox{dom}}
+\newcommand{\range}{\mbox{range}}
+\newcommand{\cover}{{\mathcal C}}
+\newcommand{\integers}{\mathbf{Z}}
+\newcommand{\vi}{\, \mathbf{i}}
+\newcommand{\vj}{\, \mathbf{j}}
+\newcommand{\vk}{\, \mathbf{k}}
+\newcommand{\bi}{\, \mathbf{i}}
+\newcommand{\bj}{\, \mathbf{j}}
+\newcommand{\bk}{\, \mathbf{k}}
+\DeclareMathOperator{\Arg}{\mathrm{Arg}}
+\DeclareMathOperator{\Ln}{\mathrm{Ln}}
+\newcommand{\imag}{\, \mathrm{i}}
+\newcommand{\erf}{\mathrm{erf}}
+\newcommand{\e}{\mathrm{e}}
+
+\usepackage{graphicx}
+\usepackage{color}
+%\shadedsolutions
+%\definecolor{SolutionColor}{rgb}{1,0.72,0.46} %{0.8,0.9,1}
+\newcommand\AM{\textsc{am}}
+\newcommand\PM{\textsc{pm}}
+
+
+     
+\newcommand{\quiz}{25}
+\newcommand{\term}{Fall}
+\newcommand{\due}{Thursday 2 May 13:20}
+\newcommand{\class}{MATH 202, Spring \the\year}
+\begin{document}
+\large
+\noindent\makebox[3.0truein][l]{\textbf{\class}}
+\textbf{Name:} \hrulefill \\
+\noindent \makebox[3.0truein][l]{\textbf{In class work  \quiz}}
+\textbf{Row and Seat}:\hrulefill\\
+
+
+
+\noindent  In class work  \textbf{\quiz}  has questions \textbf{1} 
+through  \textbf{\numquestions} \/ with a total of 
+\textbf{\numpoints\/} points. Turn in your work at the end of class 
+\emph{on paper}. This assignment is due at \emph{\due}.
+
+\vspace{0.1in}
+
+
+\noindent \emph{“Perhaps my greatest wisdom is the knowledge that I do not know.”} \hfill 
+{\sc John Steinbeck\footnote{ \emph{Travels with Charley: In Search of America }}}
+
+
+\begin{questions} 
+\question Define a curve $\mathcal{C}$ parametrically as $\mathcal{C} = \begin{cases} x = \cosh(t) \\ y = \sinh(t) \end{cases}, t \in \reals$.
+
+\begin{parts}
+
+\part [2] Ask Desmos to sketch $\mathcal{C}$ and reproduce the graph here.
+
+\begin{solution}[3.0in]
+
+\end{solution}
+
+\part [2] Show that if $(x,y) \in \mathcal{C}$, then $x^2 - y^2 = 1$.
+\begin{solution}[3.0in]
+
+\end{solution}
+
+\newpage
+\part [2] Show that $(x=-1,y=0) \notin \mathcal{C}$, but that $(x=-1,y=0)$ is a point on the curve  $x^2 - y^2 = 1$.
+\textbf{Hint:} Use the fact that $\range(\cosh) = [1,\infty)$.
+\begin{solution}[3.0in]
+
+\end{solution}
+
+
+\part [2] Express the arclength of the portion of $\mathcal{C}$ if the parameter space is $[-1,1]$ as a definite integral. But do not attempt
+to use the FTC to find this value (unless you want to learn about elliptic integrals).
+\begin{solution}[3.0in]
+
+\end{solution}
+
+\end{parts}
+    
+   
+\end{questions}
+\end{document}
