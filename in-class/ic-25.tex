@@ -42,6 +42,7 @@
 \newcommand{\bk}{\, \mathbf{k}}
 \DeclareMathOperator{\Arg}{\mathrm{Arg}}
 \DeclareMathOperator{\Ln}{\mathrm{Ln}}
+\DeclareMathOperator{\sign}{\mathrm{sign}}
 \newcommand{\imag}{\, \mathrm{i}}
 \newcommand{\erf}{\mathrm{erf}}
 \newcommand{\e}{\mathrm{e}}
@@ -56,8 +57,8 @@
 
      
 \newcommand{\quiz}{25}
-\newcommand{\term}{Fall}
-\newcommand{\due}{Thursday 2 May 13:20}
+\newcommand{\term}{Spring}
+\newcommand{\due}{Tuesday 30 April 13:20}
 \newcommand{\class}{MATH 202, Spring \the\year}
 \begin{document}
 \large
@@ -67,51 +68,50 @@
 \textbf{Row and Seat}:\hrulefill\\
 
 
+\noindent \emph{“Finding Nirvana is like locating silence.”} \hfill {\sc Jack Kerouac}
 
+\vspace{0.1in}
 \noindent  In class work  \textbf{\quiz}  has questions \textbf{1} 
 through  \textbf{\numquestions} \/ with a total of 
 \textbf{\numpoints\/} points. Turn in your work at the end of class 
 \emph{on paper}. This assignment is due at \emph{\due}.
 
-\vspace{0.1in}
 
 
-\noindent \emph{“Perhaps my greatest wisdom is the knowledge that I do not know.”} \hfill 
-{\sc John Steinbeck\footnote{ \emph{Travels with Charley: In Search of America }}}
 
 
+
+\noindent Define a curve $\mathcal{C} = \begin{cases} x = \sign(t) \sqrt{|t|} \cos(|t|) \\ 
+                                                                  y = \sign(t) \sqrt{|t|} \sin(|t|) 
+                                             \end{cases} \, t \in [-3 \uppi, 3 \uppi]$.  The function $\sign$ is defined as
+ $\sign(x) = \begin{cases} -1 & x < 0 \\  0 & x = 0 \\ 1 & x > 0 \end{cases}$.     
+ Wikipedia tells me that this curve has been used for an ``efficient layout for the mirrors of concentrated solar power 
+ plants.''
+ 
+ You might like to use the Taylor series for the component functions centered at $\pi/2$; they are
+ \begin{align*}
+ x(t) &= \left( \frac{\sqrt{2} \sqrt{\ensuremath{\pi} } \left( t\operatorname{-}\frac{\ensuremath{\pi} }{2}\right) }{2}\right) \operatorname{-}\frac{\sqrt{2} \sqrt{\ensuremath{\pi} } {{\left( t\operatorname{-}\frac{\ensuremath{\pi} }{2}\right) }^{2}}}{2 \ensuremath{\pi} }\operatorname{+}\frac{\left( \sqrt{2} {{\ensuremath{\pi} }^{2}}\operatorname{+}3 \sqrt{2}\right)  {{\left( t\operatorname{-}\frac{\ensuremath{\pi} }{2}\right) }^{3}}}{12 \sqrt{\ensuremath{\pi} } \ensuremath{\pi} }\operatorname{+}\cdots, \\
+y(t) &= \frac{\sqrt{2} \sqrt{\ensuremath{\pi} }}{2}\operatorname{+}\frac{\sqrt{2} \sqrt{\ensuremath{\pi} } \left( t\operatorname{-}\frac{\ensuremath{\pi} }{2}\right) }{2 \ensuremath{\pi} }\operatorname{-}\frac{\left( \sqrt{2} {{\ensuremath{\pi} }^{2}}\operatorname{+}\sqrt{2}\right)  {{\left( t\operatorname{-}\frac{\ensuremath{\pi} }{2}\right) }^{2}}}{4 \sqrt{\ensuremath{\pi} } \ensuremath{\pi} }\operatorname{-}\frac{\left( \sqrt{2} {{\ensuremath{\pi} }^{2}}\operatorname{-}\sqrt{2}\right)  {{\left( t\operatorname{-}\frac{\ensuremath{\pi} }{2}\right) }^{3}}}{4 \sqrt{\ensuremath{\pi} } {{\ensuremath{\pi} }^{2}}}\operatorname{+}\cdots.
+\end{align*}                                      
+                                          
 \begin{questions} 
-\question Define a curve $\mathcal{C}$ parametrically as $\mathcal{C} = \begin{cases} x = \cosh(t) \\ y = \sinh(t) \end{cases}, t \in \reals$.
-
-\begin{parts}
-
-\part [2] Ask Desmos to sketch $\mathcal{C}$ and reproduce the graph here.
-
-\begin{solution}[3.0in]
-
-\end{solution}
-
-\part [2] Show that if $(x,y) \in \mathcal{C}$, then $x^2 - y^2 = 1$.
-\begin{solution}[3.0in]
-
-\end{solution}
-
-\newpage
-\part [2] Show that $(x=-1,y=0) \notin \mathcal{C}$, but that $(x=-1,y=0)$ is a point on the curve  $x^2 - y^2 = 1$.
-\textbf{Hint:} Use the fact that $\range(\cosh) = [1,\infty)$.
-\begin{solution}[3.0in]
-
-\end{solution}
-
-
-\part [2] Express the arclength of the portion of $\mathcal{C}$ if the parameter space is $[-1,1]$ as a definite integral. But do not attempt
-to use the FTC to find this value (unless you want to learn about elliptic integrals).
-\begin{solution}[3.0in]
-
-\end{solution}
-
-\end{parts}
-    
-   
-\end{questions}
-\end{document}
+  
+  \question[2] Ask Desmos to draw  $\mathcal{C}$. As best you can, reproduce the curve here.
+  
+  \begin{solution}%[2.5in]
+  \end{solution}
+  
+  \newpage
+  \question [2] Find $\displaystyle \left. \frac{\mathrm{d} y}{\mathrm{d} x} \right \vert_{t = \uppi/2}$
+    \begin{solution}%[2.5in]
+  \end{solution}
+  
+  \newpage
+  
+    \question [2] Find $\displaystyle \left. \frac{\mathrm{d}^2  y}{\mathrm{d} x^2} \right \vert_{t = \uppi/2}$
+    \begin{solution}[2.5in]
+  \end{solution}
+  
+  
+  \end{questions}
+  \end{document}
