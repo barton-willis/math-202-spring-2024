@@ -85,8 +85,8 @@ the stars each night, I’ll bet they’d live a lot differently.”}\\
 \begin{solution}[2.5in] Solving $  x = 3 t$ for $t$ yields $t = x/3$.
   Substituting this into  \mbox{$y = 9 t^2 + t$} gives $y = x^2 + x / 3$.
   The graph is an upward facing parabola with vertex \\
-  \mbox{$(x=-3/2, y=-9/4)$}
-  and x-intercepts $x=-3$ and $x=0$.
+  \mbox{$(x=-\frac{1}{6}, y=-\frac{1}{36})$}
+  and x-intercepts $x=-\frac{1}{3}$ and $x=0$.
 \end{solution}
 
 \question For the parametricaly defined curve $\begin{cases}
@@ -99,7 +99,7 @@ the stars each night, I’ll bet they’d live a lot differently.”}\\
   vertices $(x=-3,y=0)$,$(x=3,y=0)$, $(x=0,y=-9)$, and $(x=0,y=9)$.
 \end{solution}
 
-\newpage
+%\newpage
 
 
 \question For the parametrically defined curve 
@@ -109,25 +109,50 @@ of $\left . \frac{\mathrm{d} y}{\mathrm{d}x} \right |_{t=3}$
 and $\left . \frac{\mathrm{d}^2 y}{\mathrm{d} x^2} \right |_{t=3}$.
 
 \begin{solution}[3.5in]
-  Before we start, let's gather our ingredients; we have
+When I make cornbread, I like to gather all my ingredients before I start combining and mixing them.  The same is
+true for math.  Before we start, let's gather our four ingredients; we have
 \begin{align*}
-\left. \frac{\mathrm{d} y}{\mathrm{d} x} \right \vert_{t=3}
-= \left. \frac{\sqrt{3}}{2 \sqrt{t}}  \vert_{t=3} = \frac{1}{2}, \\
-\left. \frac{\mathrm{d}^2 y}{\mathrm{d} x^2} \right \vert_{t=3}
-= \left.
-    
-\end{alig*}
+\left. \frac{\mathrm{d} y}{\mathrm{d} t} \right \vert_{t=3}
+&= \left. \frac{\sqrt{3}}{2 \sqrt{t}}  \right \vert_{t=3} = \frac{1}{2}, \\
+\left. \frac{\mathrm{d}^2 y}{\mathrm{d} t^2} \right \vert_{t=3}
+& = \left . - \left( \frac{\sqrt{3}}{4 {{t}^{\frac{3}{2}}}}\right) \right \vert_{t=3} = - \frac{1}{12}, \\
+\left. \frac{\mathrm{d} x}{\mathrm{d} t} \right \vert_{t=3}
+&=  \left. - \left( \frac{1}{2 \sqrt{t + 1}}\right) \right \vert_{t=3} = -\frac{1}{4}, \\
+\left. \frac{\mathrm{d}^2 x}{\mathrm{d} t^2} \right \vert_{t=3} 
+&= \left. \frac{1}{4 {{\left( t +1\right) }^{\frac{3}{2}}}} \right \vert_{t=3} = \frac{1}{32}.
+\end{align*}
+We're now ready to make cornbread:
+\begin{align*}
+\left. \frac{\mathrm{d} y}{\mathrm{d} x} \right \vert_{t=3} &= \frac{\frac{1}{2}}{-\frac{1}{4}} = -2,\\
+\left. \frac{\mathrm{d}^2 y}{\mathrm{d} x^2} \right \vert_{t=3} &= 
+\frac{\left(-\frac{1}{4} \right) \times \left(-\frac{1}{12} \right) - \frac{1}{32} \times \frac{1}{2}}
+{\left(- \frac{1}{4}\right)^3} = -\frac{1}{3}
+\end{align*}
+If you are unlike me (the laziest boy in Buffalo County), you might like to calculate $ \frac{\mathrm{d}^2 y}{\mathrm{d} x^2}$
+fully symbolically, simplify it, and last paste in the given value of $t$.  But that's the long row to hoe and it's terribly
+error prone too. I think that finding the numeric values of all needed derivatives with respect to $t$ is better than
+finding symbolic values for the $x$ derivatives and then pasting in the given value for $t$.
+
+
 \end{solution}
 
-\newpage 
+%\newpage 
 \question Represent the arc length of the polar curve $r = a (1-\sin(\theta))$
 as a definite integral. Here $a$ is a positive real number.
 
 \begin{solution}[3.5in]
-  $$
+A quick Desmos picture shows that the parameter space is $[0,2\uppi]$.
+The integrand is the square root of $r^2 + \left(\frac{\mathrm{d} r}{\mathrm{d} \theta}\right)^2$. 
+Specifically
+\begin{equation}
+r^2 + \left(\frac{\mathrm{d} r}{\mathrm{d} \theta}\right)^2
+= a^2 (1-\sin(\theta))^2 + a^2 \cos(\theta)^2
+= 2 a^2 (1- \sin(\theta)).
+\end{equation}
+  \begin{equation}
   \sqrt{2}\, \left| a\right|  \int_0^{2 \pi}   \sqrt{1-\sin{(\theta)}}
   \, \mathrm{d} \theta.
-  $$
+  \end{equation}
 \end{solution}
 
 \question Find all points on the polar curve $r = 3 - 2 \sin(\theta)$
@@ -139,16 +164,18 @@ that have a horizontal tangent line.
   \theta = \uppi - \operatorname{arcsin}\left( \frac{3}{4}\right)$
 \end{solution}
 
-\newpage 
+%\newpage 
 \question Find area of the region bounded by the  polar curve 
 $r = 3 - 2 \sin(\theta)$
 
 \begin{solution}[3.5in]
+A quick Desmos picture shows that the parameter space is $[0,2\uppi]$.
  $\frac{11}{2} \uppi.$
 \end{solution}
 
 \question Find the area bounded by the polar curve $r = \cos(4 \theta)$
 \begin{solution}[3.5in]
+A quick Desmos picture shows that the parameter space is $[0,2\uppi]$ and the curve looks like an eight petal flower. (The chocolate flower (\emph{Berlandiera lyrata}) has eight petals). So 
   $\frac{\uppi}{2}$
 \end{solution}
 
